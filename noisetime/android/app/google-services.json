@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "130019319095",
+    "project_id": "noisetime-youth",
+    "storage_bucket": "noisetime-youth.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130019319095:android:e5e27f0ac63473a71b0eb2",
+        "android_client_info": {
+          "package_name": "com.akzmft8282.project.noisetime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130019319095-3db5807466fl9qvjreqkl3m9fsa9csv3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGPUbl4Ob6Argz-0jfFlRHZDXDBCtMhgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130019319095-3db5807466fl9qvjreqkl3m9fsa9csv3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "130019319095-snklir9b495sjk6oj5ku08bm6i2fnba4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.akzmft8282.project.noisetime"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

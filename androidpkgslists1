@@ -1,0 +1,3108 @@
+Search more than 120 000 packages
+android
+Search
+Channel: 25.05unstable
+Package sets
+androidenv
+594
+No package set
+83
+python313Packages
+14
+python312Packages
+14
+haskellPackages
+11
+jetbrains
+4
+home-assistant-component-tests
+4
+gnomeExtensions
+3
+androidStudioPackages
+3
+emacsPackages
+2
+vimPlugins
+1
+sbclPackages
+1
+libsForQt5
+1
+home-assistant-custom-components
+1
+androidStudioForPlatformPackages
+1
+Licenses
+Unfree
+607
+Apache License 2.0
+54
+MIT License
+30
+GNU General Public License v3.0 only
+9
+BSD 3-clause "New" or "Revised" License
+8
+GNU General Public License v3.0 or later
+6
+GNU Affero General Public License v3.0 or later
+6
+GNU General Public License v2.0 or later
+5
+unknown
+4
+GNU General Public License v3.0
+4
+GNU Affero General Public License v3.0 only
+4
+GNU General Public License v2.0
+3
+Unspecified free software license
+2
+SIL Open Font License 1.1
+2
+GNU Library General Public License v2 or later
+2
+GNU General Public License v2.0 only
+2
+Creative Commons Attribution Share Alike 3.0
+2
+Fraunhofer FDK AAC Codec Library
+1
+Creative Commons Attribution 4.0
+1
+BSD 2-clause "Simplified" License
+1
+Maintainers
+Tristan Ross
+606
+Morgan Jones
+606
+Masum Reza
+606
+Hadi Lashkari Ghouchani
+606
+Adrian Gierakowski
+606
+Fabian Affolter
+13
+Robert Schütz
+7
+linsui
+6
+Andrei Lapshin
+5
+Thiago K. Okada
+4
+Oscar Molnar
+4
+Martin Weinelt
+4
+Marco Köpcke
+4
+Leona Maroni
+4
+Jason Pickens
+4
+Gytis Ivaskevicius
+4
+Edward Tjörnhammar
+4
+Anatolii Popov
+4
+Bazyli Cyran
+3
+Aleksana QwQ
+3
+Teams
+Android
+606
+Jetbrains
+4
+Home Assistant
+4
+lisp
+1
+Platforms
+x86_64-linux
+729
+aarch64-linux
+715
+i686-linux
+712
+Sort: Best match
+Showing results 1-50 of 737 packages.
+Data from nixpkgs 20c4598c.
+
+haskellPackages.android
+Android methods exposed to Haskell
+Name: androidVersion: 0.0.2Outputs: out doc🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+android-tools
+Android SDK platform tools
+Name: android-toolsVersion: 35.0.1🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unicode License Agreement - Data Files and Software (2015)
+
+android-studio
+Official IDE for Android (stable channel)
+Name: android-studio-stableVersion: 2024.3.2.14🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v9
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 2.3.1_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v8
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 2.2_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v7
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 2.1_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v6
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 2.0.1_r01-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v5
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 2.0_r01-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v4
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 1.6_r03-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v3
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 1.5_r04-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v22
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 22_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v21
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 21_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v20
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 20_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v2
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 1.1_r1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v19
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 19_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v18
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 18_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v17
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 17_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v16
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 16_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v15
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 15_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v14
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 14_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v13
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 3.2_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v12
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 3.1_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v11
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 3.0_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v10
+Android SDK tools, packaged in Nixpkgs
+Name: androidVersion: 2.3.3_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+android-udev-rules
+Android udev rules list aimed to be the most comprehensive on the net
+Name: android-udev-rulesVersion: 20250314🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 or later
+
+android-studio-full
+Official IDE for Android (stable channel)
+Name: android-studio-stableVersion: 2024.3.2.14🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+android-studio-tools
+Android Studio CLI Tools
+Name: android-studio-toolsVersion: 13114758🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.test-suite
+Android SDK tools, packaged in Nixpkgs
+Name: androidenv-test-suite🌐 Homepage📦 SourceLicense: Unfree
+
+android-file-transfer
+Reliable MTP client with minimalistic UI
+Name: android-file-transferVersion: 4.4🌐 Homepage📦 SourceLicense: GNU Lesser General Public License v2.1 or later
+
+android-backup-extractor
+Utility to extract and repack Android backups created with adb backup
+Name: android-backup-extractorVersion: 0-unstable-2025-01-15-62310d4🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+androidStudioPackages.dev
+Official IDE for Android (dev channel)
+Name: android-studio-devVersion: 2025.1.1.9🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+androidStudioPackages.beta
+Official IDE for Android (beta channel)
+Name: android-studio-betaVersion: 2024.3.2.13🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+android-studio-for-platform
+The Official IDE for Android platform development
+Name: android-studio-for-platformVersion: 2024.2.2.13🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+androidenv.androidPkgs.tools
+Android SDK tools, packaged in Nixpkgs
+Name: androidsdk-tools🌐 Homepage📦 SourceLicense: Unfree
+
+androidStudioPackages.canary
+Official IDE for Android (canary channel)
+Name: android-studio-canaryVersion: 2025.1.1.9🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+androidenv.androidPkgs.emulator
+Android SDK tools, packaged in Nixpkgs
+Name: android-sdk-emulatorVersion: 36.1.9🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.ndk-bundle
+Android SDK tools, packaged in Nixpkgs
+Name: android-sdk-ndkVersion: 28.2.13676358🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.androidsdk
+Android SDK tools, packaged in Nixpkgs
+Name: androidsdk🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.platform-tools
+Android SDK tools, packaged in Nixpkgs
+Name: android-sdk-platform-toolsVersion: 36.0.0🌐 Homepage📦 SourceLicense: Unfree
+
+androidStudioForPlatformPackages.canary
+The Official IDE for Android platform development
+Name: android-studio-for-platform-canaryVersion: 2024.3.1.9🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ Unfree
+
+androidenv.androidPkgs.all.packages.sources.v36
+Android SDK tools, packaged in Nixpkgs
+Name: sourceVersion: 36_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v35
+Android SDK tools, packaged in Nixpkgs
+Name: sourceVersion: 35_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v34
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 34_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v33
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 33_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v32
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 32_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v31
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 31_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v30
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 30_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v29
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 29_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v28
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 28_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v27
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 27_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 51-100 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.sources.v26
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 26_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v25
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 25_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v24
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 24_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v23
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 23_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v22
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 22_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v21
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 21_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v20
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 20_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v19
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 19_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v18
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 18_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v17
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 17_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v16
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 16_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v15
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 15_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.sources.v14
+Android SDK tools, packaged in Nixpkgs
+Name: sourcesVersion: 14_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.extras.v2_1
+Android SDK tools, packaged in Nixpkgs
+Name: desktop-head-unit-linux-x64_r02.1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.extras.v2_0
+Android SDK tools, packaged in Nixpkgs
+Name: desktop-head-unit-linux-x64_r02.0.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v4_1_0
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 4.1.0-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v4_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 4.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v4_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 4.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v9.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 9_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v8.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 8_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v7.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 7_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v6.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 6_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v5.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 5_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v4.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 4_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v3.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 3-r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36x.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36-ext18_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36x.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36-ext18_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36x.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36-ext18_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36x.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36-ext18_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.page_size_16kb.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-playstore-ps16kVersion: 36_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.page_size_16kb.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-playstore-ps16kVersion: 36_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.android-wear.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36_signed_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v36.android-wear.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36_signed_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35x.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35-ext14_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35x.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35-ext14_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35x.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35-ext15_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35x.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35-ext15_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35x.android-wear.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35-ext15_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35x.android-wear.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35-ext15_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.page_size_16kb.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-playstore-ps16kVersion: 35_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.page_size_16kb.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-playstore-ps16kVersion: 35_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 101-150 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.system-images.v35.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.android-wear.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 35_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v35.android-wear.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 35_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34x.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 34-ext10_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34x.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34-ext10_r01-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34x.android-automotive.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 34-ext9_playstore_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34x.android-automotive.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34-ext9_playstore_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 34_r14.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34_r14.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 34_r14.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34_r14.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 34_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.android-wear.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 34_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.android-wear.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 34_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v34.android-tv.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 34_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33x.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 33-ext5_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33x.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33-ext5_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 33_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 33_r17.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33_r17.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 33_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.android-wear.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 33_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.android-wear.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 33_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.android-tv.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.android-automotive.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 33_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v33.android-automotive.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 33_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 32_r04-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 32_r04-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 32_r08.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 32_r08.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 32_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 32_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.android-automotive-playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 32_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v32.android-automotive-playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 32_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 31_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 31_r09-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 31_r14.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 31_r11.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 31_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 31_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 31_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v31.android-tv.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 31_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 30_r10-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 30_r09-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 30_r10-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 151-200 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.system-images.v30.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 30_r16.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 30_r16.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 30_r16.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 30_r11.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 30_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.android-wear.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 30_r12.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.android-wear.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 30_r12.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 30_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v30.android-automotive-playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 30_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 29_r08-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 29_r08-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 29_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 29_r13.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 29_r13.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 29_r13.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 29_r08-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 29_r08-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 29_r08.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 29_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v29.android-automotive-playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 29_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 28_r08.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 28_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 28_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 28_r11.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 28_r12.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 28_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 28_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 28_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 28_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.android-wear.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 28_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 28_r10.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v28.android-automotive-playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 28_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 27_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 27_r11.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 27_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 27_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 27_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 27_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v27.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 27_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 26_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 26_r16.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 26_r16.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 26_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 26_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 26_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 26_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.android-wear.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 26_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v26.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 26_r14.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 25_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 25_r18.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 201-250 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.system-images.v25.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 25_r18.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 25_r18.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 25_r20.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 25_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 25_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 25_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.android-wear.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 25_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.android-wear.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 25_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v25.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 25_r16.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.google_apis_playstore.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 24_r19.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 24_r27.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 24_r27.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 24_r29.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 24_r08.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 24_r08.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 24_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 24_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v24.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 24_r22.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 23_r33.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 23_r33.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 23_r33.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 23_r33.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 23_r10.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 23_r10.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 23_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 23_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 23_r21.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v23.android-tv.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 23_r12.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 22_r26.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 22_r26.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 22_r26.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 22_r26.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 22_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 22_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 22_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 22_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v22.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 22_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 21_r32.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 21_r32.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 21_r32.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 21_r32.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.default.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 21_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 21_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 21_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.default.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 21_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.android-tv.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 21_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v21.android-tv.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 21_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v19.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 19_r40.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v19.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 19_r40.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v19.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 19_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 251-300 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.system-images.v19.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 19_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v18.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 18_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v18.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 18_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v18.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 18_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v18.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 18_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v17.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 17_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v17.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 17_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v17.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 17_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v17.default.mips
+Android SDK tools, packaged in Nixpkgs
+Name: sysimg_mipsVersion: 17_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v17.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 17_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v16.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 16_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v16.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 16_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v16.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 16_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v16.default.mips
+Android SDK tools, packaged in Nixpkgs
+Name: sysimg_mipsVersion: 16_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v16.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 16_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v15.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 15_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v15.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 15_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v15.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 15_r07.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v15.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 15_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v14.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: sysimg_armv7aVersion: 14_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v10.google_apis.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 10_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v10.google_apis.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 10_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v10.default.x86
+Android SDK tools, packaged in Nixpkgs
+Name: x86Version: 10_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.v10.default.armeabi-v7a
+Android SDK tools, packaged in Nixpkgs
+Name: armeabi-v7aVersion: 10_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.VanillaIceCream.page_size_16kb.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-ps16k-VanillaIceCream_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.VanillaIceCream.page_size_16kb.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-ps16k-VanillaIceCream_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.VanillaIceCream.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-VanillaIceCream_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.VanillaIceCream.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-VanillaIceCream_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.VanillaIceCream.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-VanillaIceCream_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.VanillaIceCream.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-VanillaIceCream_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.UpsideDownCakePrivacySandbox.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-UpsideDownCakePrivacySandbox_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.UpsideDownCakePrivacySandbox.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-UpsideDownCakePrivacySandbox_r03-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.TiramisuPrivacySandbox.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-TiramisuPrivacySandbox_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.TiramisuPrivacySandbox.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-TiramisuPrivacySandbox_r09-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.TiramisuPrivacySandbox.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-TiramisuPrivacySandbox_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.TiramisuPrivacySandbox.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-TiramisuPrivacySandbox_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.CANARY.page_size_16kb.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-playstore-ps16kVersion: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.CANARY.page_size_16kb.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-playstore-ps16kVersion: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.CANARY.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.CANARY.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.CANARY.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64Version: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.CANARY.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8aVersion: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.Baklava.page_size_16kb.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-playstore-ps16k-Baklava_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.Baklava.page_size_16kb.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-playstore-ps16k-Baklava_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.Baklava.google_apis_playstore.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-Baklava_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.Baklava.google_apis_playstore.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-Baklava_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.Baklava.google_apis.x86_64
+Android SDK tools, packaged in Nixpkgs
+Name: x86_64-Baklava_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.system-images.Baklava.google_apis.arm64-v8a
+Android SDK tools, packaged in Nixpkgs
+Name: arm64-v8a-Baklava_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.tools.v26_1_1
+Android SDK tools, packaged in Nixpkgs
+Name: sdk-tools-linuxVersion: 4333796.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.skiaparser.v7
+Android SDK tools, packaged in Nixpkgs
+Name: skiaparserVersion: 13188227-linux-x64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 301-350 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.skiaparser.v6
+Android SDK tools, packaged in Nixpkgs
+Name: skiaparserVersion: 7083912-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.skiaparser.v5
+Android SDK tools, packaged in Nixpkgs
+Name: skiaparserVersion: 12616120-linux-x64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.skiaparser.v4
+Android SDK tools, packaged in Nixpkgs
+Name: skiaparserVersion: 11591181-linux-x64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.skiaparser.v3
+Android SDK tools, packaged in Nixpkgs
+Name: skiaparserVersion: 7478287-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v36x
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 36-ext18_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v36
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 36_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v35x
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 35-ext14_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v35
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 35_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v34x
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 34-ext8_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v34
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 34-ext7_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v33x
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 33-ext4_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v33
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 33-ext3_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v32
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 32_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v31
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 31_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v30
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 30_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v29
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 29_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v28
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 28_r06.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v27
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 27_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v26
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 26_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v25
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 25_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v24
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 24_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.v23
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 23_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.VanillaIceCream
+Android SDK tools, packaged in Nixpkgs
+Name: platform-VanillaIceCream_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.UpsideDownCakePrivacySandbox
+Android SDK tools, packaged in Nixpkgs
+Name: platform-UpsideDownCakePrivacySandbox_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.UpsideDownCake
+Android SDK tools, packaged in Nixpkgs
+Name: platform-UpsideDownCake_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.TiramisuPrivacySandbox
+Android SDK tools, packaged in Nixpkgs
+Name: platform-TiramisuPrivacySandbox_r09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.CANARY
+Android SDK tools, packaged in Nixpkgs
+Name: platformVersion: 36.0-CANARY_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platforms.Baklava
+Android SDK tools, packaged in Nixpkgs
+Name: platform-Baklava_r05.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platform-tools.v36_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: platform-tools_r36.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platform-tools.v36_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: platform-tools_r36.0.0-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platform-tools.v35_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: platform-tools_r35.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platform-tools.v35_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: platform-tools_r35.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.platform-tools.v34_0_5
+Android SDK tools, packaged in Nixpkgs
+Name: platform-tools_r34.0.5-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v29_0_13846066-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r29-beta3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v29_0_13599879-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r29-beta2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v29_0_13113456-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r29-beta1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v28_2_13676358
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r28c-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v28_1_13356709
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r28b-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v28_0_13004108
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r28-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v28_0_12916984-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r28-beta3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v28_0_12674087-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r28-beta2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v28_0_12433566-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r28-beta1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v27_3_13750724
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r27d-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v27_2_12479018
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r27c-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v27_1_12297006
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r27b-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v27_0_12077973
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r27-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v27_0_11902837-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r27-beta2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v27_0_11718014-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r27-beta1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v26_3_11579264
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r26d-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v26_2_11394342
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r26c-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 351-400 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.ndk.v26_1_10909125
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r26b-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v26_0_10792818
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r26-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v26_0_10636728-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r26-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v26_0_10404224-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r26-beta1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_2_9519653
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25c-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_1_8937393
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25b-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_0_8775105
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_0_8528842-rc4
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25-beta4-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_0_8355429-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25-beta3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_0_8221429-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25-beta2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v25_0_8151533-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r25-beta1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v24_0_8215888
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r24-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v24_0_8079956-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r24-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v24_0_7956693-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r24-beta2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v24_0_7856742-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r24-beta1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_2_8568313
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23c-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_1_7779620
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23b-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7599858
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7530507-rc6
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta6-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7421159-rc5
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta5-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7344513-rc4
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta4-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7272597-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta3-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7196353-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v23_0_7123448-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta1-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v22_1_7171670
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r22b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v22_0_7026061
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r22-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v22_0_6917172-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r22-beta1-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_4_7075529
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21e-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_3_6528147
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21d-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_2_6472646
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21c-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_1_6363665-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-beta3-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_1_6352462
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_1_6273396-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_1_6210238-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-beta1-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_0_6113669
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v21_0_6011959-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v20_1_5948944
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v20_0_5594570
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v20_0_5471264-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20-beta3-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v20_0_5392854-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v19_2_5345600
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r19c-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v19_0_5232133
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r19-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v18_1_5063045
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r18b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v17_2_4988734
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r17c-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk.v16_1_4479499
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r16b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v23_0_7344513-rc4
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta4-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v23_0_7272597-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta3-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v23_0_7196353-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v23_0_7123448-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r23-beta1-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v22_1_7171670
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r22b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 401-450 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.ndk-bundle.v22_0_7026061
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r22-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v22_0_6917172-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r22-beta1-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_4_7075529
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21e-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_3_6528147
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21d-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_2_6472646
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21c-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_1_6363665-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-beta3-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_1_6352462
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_1_6273396-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_1_6210238-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21b-beta1-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_0_6113669
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v21_0_6011959-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r21-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v20_1_5948944
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v20_0_5594570
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v20_0_5471264-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20-beta3-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v20_0_5392854-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r20-beta2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v19_2_5345600
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r19c-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v19_0_5232133
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r19-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v18_1_5063045
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r18b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v17_2_4988734
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r17c-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.ndk-bundle.v16_1_4479499
+Android SDK tools, packaged in Nixpkgs
+Name: android-ndk-r16b-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v36_2_4
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13899551.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v36_1_9
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13823996.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v36_1_8
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13784423.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v36_1_2
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13544801.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_6_9
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13473012.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_6_2
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13248170.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_5_8
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13181580.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_5_3
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13023280.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_5_2
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13003482.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_5_10
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13402964.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_4_9
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 13025442.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_4_8
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 12990073.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_3_12
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 12990079.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_3_11
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 12836668.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_2_5
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 12205771.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_1_4
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 11672324.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_1_3
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 11643238.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_1_2
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 11616444.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v35_1_19
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 12171648.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v34_2_16
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 12038310.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v34_2_11
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 11592276.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v34_1_9
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 11009885.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v34_1_19
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 11525734.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v33_1_20
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 10871397.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.emulator.v32_1_15
+Android SDK tools, packaged in Nixpkgs
+Name: emulator-linux_x64Version: 10696886.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v9_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 9477386_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v8_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 9123335_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v7_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 8512546_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v6_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 8092744_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v5_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 7583922_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 451-500 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.cmdline-tools.v4_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 7302050_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v3_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 6858069_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v2_1
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 6609375_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v2_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 6514223_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v1_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 6200805_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v19_0-rc01
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 12996373_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v19_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 13114758_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v17_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 12700392_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v16_0-rc01
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 12172612_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v16_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 12266719_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v14_0-rc01
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 11391160_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v13_0-rc01
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 11379558_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v13_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 11479570_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v12_0-rc15
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 10572941_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v12_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 11076708_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v11_0-rc01
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 10320515_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v11_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 10406996_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmdline-tools.v10_0
+Android SDK tools, packaged in Nixpkgs
+Name: commandlinetools-linuxVersion: 9862592_latest.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_6_4111459
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.6.4111459-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_31_6
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.31.6-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_31_5
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.31.5-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_31_4
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.31.4-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_31_1
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.31.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_31_0
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.31.0-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_30_5
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.30.5-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_30_4
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.30.4-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_30_3
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.30.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_22_1
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.22.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_18_1
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.18.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.cmake.v3_10_2
+Android SDK tools, packaged in Nixpkgs
+Name: cmakeVersion: 3.10.2-linux-x86_64.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v36_0_0-rc5
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r36-rc5_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v36_0_0-rc4
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r36-rc4_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v36_0_0-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r36-rc3_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v36_0_0-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r36-rc1_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v36_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r36_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v35_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r35.0.1_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v35_0_0-rc4
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r35-rc4_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v35_0_0-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r35-rc3_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v35_0_0-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r35-rc2_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v35_0_0-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r35-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v35_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r35_linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v34_0_0-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r34-rc3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v34_0_0-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r34-rc2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v34_0_0-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r34-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v34_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r34-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v33_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r33.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v33_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r33.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v33_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r33.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v33_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r33-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v32_1_0-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r32.1-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 501-550 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.build-tools.v32_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r32-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v31_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r31-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v30_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r30.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v30_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r30.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v30_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r30.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v30_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r30-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_0-rc3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29-rc3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_0-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29-rc2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_0-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v29_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r29-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v28_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r28.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v28_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r28.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v28_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r28.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v28_0_0-rc2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r28-rc2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v28_0_0-rc1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r28-rc1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v28_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r28-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v27_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r27.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v27_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r27.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v27_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r27.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v27_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r27-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v26_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r26.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v26_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r26.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v26_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r26.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v26_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r26-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v25_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r25.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v25_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r25.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v25_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r25.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v25_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r25-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v24_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r24.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v24_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r24.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v24_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r24.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v24_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r24-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v23_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r23.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v23_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r23.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v23_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r23.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v23_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r23-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v22_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r22.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v22_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r22-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v21_1_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r21.1.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v21_1_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r21.1.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v21_1_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r21.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v21_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r21.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v21_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r21.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v21_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r21-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v20_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r20-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v19_1_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r19.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v19_0_3
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r19.0.3-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 551-600 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.packages.build-tools.v19_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r19.0.2-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v19_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r19.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v19_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r19-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v18_1_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r18.1.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v18_1_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r18.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v18_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r18.0.1-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.packages.build-tools.v17_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: build-tools_r17-linux.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.2.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-beta5
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-beta5.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-beta4
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-beta4.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-beta3
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-beta3.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-beta2
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-beta2.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-beta1
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-beta1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-alpha8
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-alpha8.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0-alpha4
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0-alpha4.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-solver-1_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layout-solverVersion: 1.0.0.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_2
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.2.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_1
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-beta5
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-beta5.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-beta4
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-beta4.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-beta3
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-beta3.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-beta2
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-beta2.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-beta1
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-beta1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-alpha8
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-alpha8.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0-alpha4
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0-alpha4.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-m2repository-com-android-support-constraint-constraint-layout-1_0_0
+Android SDK tools, packaged in Nixpkgs
+Name: com.android.support.constraint-constraint-layoutVersion: 1.0.0.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-webdriver
+Android SDK tools, packaged in Nixpkgs
+Name: webdriver_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-simulators
+Android SDK tools, packaged in Nixpkgs
+Name: simulator_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-market_licensing
+Android SDK tools, packaged in Nixpkgs
+Name: market_licensing-r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-market_apk_expansion
+Android SDK tools, packaged in Nixpkgs
+Name: market_apk_expansion-r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-m2repository
+Android SDK tools, packaged in Nixpkgs
+Name: google_m2repository_gms_v11_3_rc05_wear_2_0_5.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-instantapps
+Android SDK tools, packaged in Nixpkgs
+Name: iasdkVersion: 1.9.0-1566514721.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-google_play_services_froyo
+Android SDK tools, packaged in Nixpkgs
+Name: google_play_services_3265130_r12.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-google_play_services
+Android SDK tools, packaged in Nixpkgs
+Name: google_play_services_v16_1_rc09.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-gcm
+Android SDK tools, packaged in Nixpkgs
+Name: gcm_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-auto
+Android SDK tools, packaged in Nixpkgs
+Name: desktop-head-unit-linux-x64_r02.1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-analytics_sdk_v2
+Android SDK tools, packaged in Nixpkgs
+Name: GoogleAnalyticsAndroid_2.0beta5.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-google-admob_ads_sdk
+Android SDK tools, packaged in Nixpkgs
+Name: GoogleAdMobAdsSdkAndroidVersion: 6.4.1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.extras.extras-android-m2repository
+Android SDK tools, packaged in Nixpkgs
+Name: android_m2repository_r47.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v25.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 25_r1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v24.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 24_r1.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v23.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 23_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v22.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 22_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v21.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 21_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v19.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 19_r20.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v18.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 18_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v17.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 17_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v16.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 16_r04.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v15.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 15_r03.zip🌐 Homepage📦 SourceLicense: Unfree
+
+Showing results 601-650 of 737 packages.
+Data from nixpkgs 20c4598c.
+androidenv.androidPkgs.all.addons.v14.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 14_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v13.google_tv_addon
+Android SDK tools, packaged in Nixpkgs
+Name: google_tvVersion: 13_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v13.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 13_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v12.google_tv_addon
+Android SDK tools, packaged in Nixpkgs
+Name: google_tvVersion: 12_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v12.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 12_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v11.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 11_r01.zip🌐 Homepage📦 SourceLicense: Unfree
+
+androidenv.androidPkgs.all.addons.v10.google_apis
+Android SDK tools, packaged in Nixpkgs
+Name: google_apisVersion: 10_r02.zip🌐 Homepage📦 SourceLicense: Unfree
+
+haskellPackages.android-activity
+Turn regular Haskell programs into Android Activities
+Name: android-activityVersion: 0.2.0.1Outputs: out doc🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+haskellPackages.android-lint-summary
+A pretty printer for Android Lint errors
+Name: android-lint-summaryVersion: 0.2.1Outputs: out doc🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+haskellPackages.AndroidViewHierarchyImporter
+Android view hierarchy importer
+Name: AndroidViewHierarchyImporterVersion: 0.1.0.1Outputs: out doc🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+python313Packages.android-backup
+Unpack and repack android backups
+Name: python3.13-android-backupVersion: 0.2.0Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python312Packages.android-backup
+Unpack and repack android backups
+Name: python3.12-android-backupVersion: 0.2.0Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+haskellPackages.gogol-androidmanagement
+Google Android Management SDK
+Name: gogol-androidmanagementVersion: 0.5.0Outputs: out doc🌐 Homepage📦 SourceLicense: unknown
+
+bionic
+Android libc implementation
+Name: x86_64-bionic-prebuilt-ndk-release-r23Outputs: out dev🌐 Homepage📦 SourceLicense: MIT License
+
+apkid
+Android Application Identifier
+Name: apkidVersion: 3.0.0Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+agi
+Android GPU Inspector
+Name: agiVersion: 3.3.1🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+home-assistant-custom-components.sleep_as_android
+Sleep As Android integration for Home Assistant
+Name: python3.13-IATkachenko-sleep_as_androidVersion: 2.3.2🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python313Packages.python-axolotl
+Python port of libaxolotl-android
+Name: python3.13-python-axolotlVersion: 0.2.3Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v3.0
+
+python313Packages.adb-enhanced
+Tool for Android testing and development
+Name: python3.13-adb-enhancedVersion: 2.5.24Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python312Packages.python-axolotl
+Python port of libaxolotl-android
+Name: python3.12-python-axolotlVersion: 0.2.3Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v3.0
+
+python312Packages.adb-enhanced
+Tool for Android testing and development
+Name: python3.12-adb-enhancedVersion: 2.5.24Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+payload_dumper
+Android OTA payload dumper
+Name: payload_dumper-unstableVersion: 2022-04-11🌐 Homepage📦 SourceLicense: GNU General Public License v3.0
+
+haskellPackages.push-notifications
+Push notifications for Android and iOS
+Name: push-notificationsVersion: 0.2.1Outputs: out doc🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+haskellPackages.phone-push
+Push notifications for Android and iOS
+Name: phone-pushVersion: 0.1.3Outputs: out doc🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+git-repo
+Android's repo management tool
+Name: git-repoVersion: 2.54🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+ghost
+Android post-exploitation framework
+Name: ghostVersion: 8.0.0Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+genymotion
+Fast and easy Android emulation
+Name: genymotionVersion: 3.8.0🌐 Homepage📦 SourceLicense: Unfree
+
+cargo-apk
+Tool for creating Android packages
+Name: cargo-apkVersion: 0.9.6🌐 Homepage📦 SourceLicenses: MIT License ▪ Apache License 2.0
+
+aemu
+Android emulation utilities library
+Name: aemuVersion: 0.1.2🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ MIT License ▪ BSD 3-clause "New" or "Revised" License
+
+abootimg
+Manipulate Android Boot Images
+Name: abootimgVersion: 0.6🌐 Homepage📦 SourceLicense: GNU General Public License v2.0
+
+universal-android-debloater
+Tool to debloat non-rooted Android devices
+Name: universal-android-debloaterVersion: 1.1.2🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+haskellPackages.gogol-androiddeviceprovisioning
+Google Android Device Provisioning Partner SDK
+Name: gogol-androiddeviceprovisioningVersion: 0.5.0Outputs: out doc🌐 Homepage📦 SourceLicense: unknown
+
+gnomeExtensions.run-android-emulators
+Run android emulators from Quick Settings
+Name: gnome-shell-extension-run-android-emulatorsVersion: 5🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 or later
+
+trueseeing
+Non-decompiling Android vulnerability scanner
+Name: trueseeingVersion: 2.2.5Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 or later
+
+quark-engine
+Android malware (analysis and scoring) system
+Name: quark-engineVersion: 25.4.1Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+python313Packages.pydroid-ipcam
+Python library for Android IP Webcam
+Name: python3.13-pydroid-ipcamVersion: 3.0.0Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python312Packages.pydroid-ipcam
+Python library for Android IP Webcam
+Name: python3.12-pydroid-ipcamVersion: 3.0.0Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+imgpatchtools
+Tools to manipulate Android OTA archives
+Name: imgpatchtoolsVersion: 0.3🌐 Homepage📦 SourceLicense: GNU General Public License v3.0
+
+haskellPackages.adb
+Android Debug Bridge (ADB) protocol
+Name: adbVersion: 0.1.0.1Outputs: out doc🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+gnirehtet
+Reverse tethering over adb for Android
+Name: gnirehtetVersion: 2.5.1🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+apkeditor
+Powerful android apk resources editor
+Name: apkeditorVersion: 1.4.1📦 SourceLicense: Apache License 2.0
+
+avbroot
+Sign (and root) Android A/B OTAs with custom keys while preserving Android Verified Boot
+Name: avbrootVersion: 3.16.0🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+adb-sync
+Tool to synchronise files between a PC and an Android devices using ADB (Android Debug Bridge)
+Name: adb-sync-unstableVersion: 2019-01-01🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python313Packages.notifications-android-tv
+Python API for sending notifications to Android/Fire TVs
+Name: python3.13-notifications-android-tvVersion: 1.2.2Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python313Packages.androidtvremote2
+Library to interact with the Android TV Remote protocol v2
+Name: python3.13-androidtvremote2Version: 0.2.1Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python312Packages.notifications-android-tv
+Python API for sending notifications to Android/Fire TVs
+Name: python3.12-notifications-android-tvVersion: 1.2.2Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python312Packages.androidtvremote2
+Library to interact with the Android TV Remote protocol v2
+Name: python3.12-androidtvremote2Version: 0.2.1Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+snapdragon-profiler
+An profiler for Android devices running Snapdragon chips
+Name: snapdragon-profilerVersion: 2021.2🌐 Homepage📦 SourceLicense: Unfree
+
+qtscrcpy
+Android real-time display control software
+Name: qtscrcpyVersion: 3.1.3🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python313Packages.androguard
+Tool and Python library to interact with Android Files
+Name: python3.13-androguardVersion: 4.1.3Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+Showing results 651-700 of 737 packages.
+Data from nixpkgs 20c4598c.
+python312Packages.androguard
+Tool and Python library to interact with Android Files
+Name: python3.12-androguardVersion: 4.1.3Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+payload-dumper-go
+Android OTA payload dumper written in Go
+Name: payload-dumper-goVersion: 1.3.0🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+cargo-ndk
+Cargo extension for building Android NDK projects
+Name: cargo-ndkVersion: 3.5.7🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ MIT License
+
+apktool
+Tool for reverse engineering Android apk files
+Name: apktoolVersion: 2.11.1🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+androguard
+Tool and Python library to interact with Android Files
+Name: androguardVersion: 4.1.3Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+unciv
+Open-source Android/Desktop remake of Civ V
+Name: uncivVersion: 4.16.5🌐 Homepage📦 SourceLicense: Mozilla Public License 2.0
+
+simg2img
+Tool to convert Android sparse images to raw images
+Name: simg2imgVersion: 1.1.5🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python313Packages.philipstv
+CLI and library to control Philips Android-powered TVs
+Name: python3.13-philipstvVersion: 2.1.1Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python313Packages.adb-homeassistant
+Pure python implementation of the Android ADB and Fastboot protocols
+Name: python3.13-adb-homeassistantVersion: 1.3.1Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python312Packages.philipstv
+CLI and library to control Philips Android-powered TVs
+Name: python3.12-philipstvVersion: 2.1.1Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python312Packages.adb-homeassistant
+Pure python implementation of the Android ADB and Fastboot protocols
+Name: python3.12-adb-homeassistantVersion: 1.3.1Outputs: out dist🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+philipstv
+CLI and library to control Philips Android-powered TVs
+Name: philipstvVersion: 2.1.1Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+koodousfinder
+Tool to allows users to search for and analyze Android apps
+Name: koodousfinderVersion: 0.1.0Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+jmtpfs
+FUSE filesystem for MTP devices like Android phones
+Name: jmtpfsVersion: 0.5🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+fdk_aac
+High-quality implementation of the AAC codec from Android
+Name: fdk-aacVersion: 2.0.3Outputs: out dev🌐 Homepage📦 SourceLicense: Fraunhofer FDK AAC Codec Library
+
+fastlane
+Tool to automate building and releasing iOS and Android apps
+Name: fastlaneVersion: 2.227.1🌐 Homepage📦 SourceLicense: MIT License
+
+dex2jar
+Tools to work with android .dex and java .class files
+Name: dex2jarVersion: 2.4🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+dcnnt
+UI-less tool to connect Android phone with desktop
+Name: dcnntVersion: 0.10.0Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+bundletool
+Command-line tool to manipulate Android App Bundles
+Name: bundletoolVersion: 1.18.1🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+apksigner
+Command line tool to sign and verify Android APKs
+Name: apksignerVersion: 35.0.6🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+adbtuifm
+TUI-based file manager for the Android Debug Bridge
+Name: adbtuifmVersion: 0.5.8🌐 Homepage📦 SourceLicense: MIT License
+
+adbfs-rootless
+Mount Android phones on Linux with adb, no root required
+Name: adbfs-rootless-unstableVersion: 2023-03-21🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+aapt
+Build tool that compiles and packages Android app's resources
+Name: aaptVersion: 8.4.1-11315950🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+python313Packages.androidtv
+Communicate with an Android TV or Fire TV device via ADB over a network
+Name: python3.13-androidtvVersion: 0.0.75Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python312Packages.androidtv
+Communicate with an Android TV or Fire TV device via ADB over a network
+Name: python3.12-androidtvVersion: 0.0.75Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+soundwireserver
+Turn your Android device into wireless headphones / wireless speaker
+Name: soundwireVersion: 3.0🌐 Homepage📦 SourceLicense: Unfree
+
+selendroid
+Test automation for native or hybrid Android apps and the mobile web
+Name: selendroid-standaloneVersion: 0.17.0🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+sdkmanager
+Drop-in replacement for sdkmanager from the Android SDK written in Python
+Name: sdkmanagerVersion: 0.6.11Outputs: out dist🌐 Homepage📦 SourceLicense: GNU Affero General Public License v3.0 or later
+
+scrcpy
+Display and control Android devices over USB or TCP/IP
+Name: scrcpyVersion: 3.3🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+rquickshare-legacy
+Rust implementation of NearbyShare/QuickShare from Android for Linux and macOS
+Name: rquickshare-legacyVersion: 0.11.5🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 or later
+
+rquickshare
+Rust implementation of NearbyShare/QuickShare from Android for Linux and macOS
+Name: rquickshareVersion: 0.11.5🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 or later
+
+python313Packages.sdkmanager
+Drop-in replacement for sdkmanager from the Android SDK written in Python
+Name: python3.13-sdkmanagerVersion: 0.6.11Outputs: out dist🌐 Homepage📦 SourceLicense: GNU Affero General Public License v3.0 or later
+
+python312Packages.sdkmanager
+Drop-in replacement for sdkmanager from the Android SDK written in Python
+Name: python3.12-sdkmanagerVersion: 0.6.11Outputs: out dist🌐 Homepage📦 SourceLicense: GNU Affero General Public License v3.0 or later
+
+mvt
+Tool to facilitate the consensual forensic analysis of Android and iOS devices
+Name: mvtVersion: 2.5.4Outputs: out dist🌐 Homepage📦 SourceLicense: Unfree
+
+libcamera-qcam
+Open source camera stack and framework for Linux, Android, and ChromeOS
+Name: libcameraVersion: 0.5.0Outputs: out dev🌐 Homepage📦 SourceLicense: GNU Library General Public License v2 or later
+
+libcamera
+Open source camera stack and framework for Linux, Android, and ChromeOS
+Name: libcameraVersion: 0.5.0Outputs: out dev🌐 Homepage📦 SourceLicense: GNU Library General Public License v2 or later
+
+jiten
+Japanese android/cli/web dictionary based on jmdict/kanjidic
+Name: jitenVersion: 1.1.0Outputs: out dist🌐 Homepage📦 SourceLicenses: GNU Affero General Public License v3.0 or later ▪ Creative Commons Attribution Share Alike 3.0 ▪ Unfree redistributable
+
+go-mtpfs
+Simple FUSE filesystem for mounting Android devices as a MTP device
+Name: go-mtpfsVersion: 1.0.0🌐 Homepage📦 SourceLicense: BSD 3-clause "New" or "Revised" License
+
+gfxtablet
+Uinput driver for Android GfxTablet tablet-as-input-device app
+Name: gfxtablet-uinput-driverVersion: 1.4📦 SourceLicense: MIT License
+
+apksigcopier
+Copy/extract/patch android apk signatures & compare APKs
+Name: apksigcopierVersion: 1.1.1Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 or later
+
+python313Packages.pyfcm
+Python client for FCM - Firebase Cloud Messaging (Android, iOS and Web)
+Name: python3.13-pyfcmVersion: 2.0.1Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python313Packages.filebytes
+Scripts to parse ELF, PE, Mach-O and OAT (Android Runtime)
+Name: python3.13-filebytesVersion: 0.10.2Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v2.0
+
+python312Packages.pyfcm
+Python client for FCM - Firebase Cloud Messaging (Android, iOS and Web)
+Name: python3.12-pyfcmVersion: 2.0.1Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+python312Packages.filebytes
+Scripts to parse ELF, PE, Mach-O and OAT (Android Runtime)
+Name: python3.12-filebytesVersion: 0.10.2Outputs: out dist🌐 Homepage📦 SourceLicense: GNU General Public License v2.0
+
+otadump
+Command-line tool to extract partitions from Android OTA files
+Name: otadumpVersion: 0.1.2🌐 Homepage📦 SourceLicense: MIT License
+
+fdroidserver
+Server and tools for F-Droid, the Free Software repository system for Android
+Name: fdroidserverVersion: 2.4.0Outputs: out dist🌐 Homepage📦 SourceLicense: GNU Affero General Public License v3.0 or later
+
+bytecode-viewer
+Lightweight user-friendly Java/Android Bytecode Viewer, Decompiler & More
+Name: bytecode-viewerVersion: 2.12🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+styluslabs-write
+Cross-platform (Windows, Mac, Linux, iOS, Android) application for handwritten notes
+Name: styluslabs-writeVersion: 2024-10-12🌐 Homepage📦 SourceLicenses: MIT License ▪ zlib License ▪ GNU Affero General Public License v3.0 only
+
+sdat2img
+Convert sparse Android data image (.dat) into filesystem ext4 image (.img)
+Name: sdat2img-unstableVersion: 2021-11-09🌐 Homepage📦 SourceLicense: MIT License
+
+waydroid
+Container-based approach to boot a full Android system on a regular GNU/Linux system
+Name: waydroidVersion: 1.5.4🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+Showing results 701-737 of 737 packages.
+Data from nixpkgs 20c4598c.
+python313Packages.pyaxmlparser
+Python3 Parser for Android XML file and get Application Name without using Androguard
+Name: python3.13-pyaxmlparserVersion: 0.3.27Outputs: out dist🌐 Homepage📦 SourceLicenses: MIT License ▪ Apache License 2.0
+
+python312Packages.pyaxmlparser
+Python3 Parser for Android XML file and get Application Name without using Androguard
+Name: python3.12-pyaxmlparserVersion: 0.3.27Outputs: out dist🌐 Homepage📦 SourceLicenses: MIT License ▪ Apache License 2.0
+
+nerdfetch
+POSIX *nix (Linux, macOS, Android, *BSD, etc) fetch script using Nerdfonts
+Name: nerdfetchVersion: 8.3.1🌐 Homepage📦 SourceLicense: MIT License
+
+alp
+Convenient authentication method that lets you use your android device as a key for your Linux machine
+Name: alpVersion: 1.1.18🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 only
+
+whatsapp-chat-exporter
+WhatsApp database parser
+Name: whatsapp-chat-exporterVersion: 0.10.5Outputs: out dist🌐 Homepage📦 SourceLicense: MIT License
+
+libsForQt5.mapbox-gl-native
+Interactive, thoroughly customizable maps in native Android, iOS, macOS, Node.js, and Qt applications, powered by vector tiles and OpenGL
+Name: mapbox-gl-nativeVersion: 1.6.0🌐 Homepage📦 SourceLicense: BSD 2-clause "Simplified" License
+
+axmldec
+Stand-alone binary AndroidManifest.xml decoder
+Name: axmldecVersion: 1.2.0🌐 Homepage📦 SourceLicense: ISC License
+
+sidequest
+Open app store and side-loading tool for Android-based VR devices such as the Oculus Go, Oculus Quest or Moverio BT 300
+Name: SideQuestVersion: 0.10.33🌐 HomepageLicense: MIT License
+
+koreader
+An ebook reader application supporting PDF, DjVu, EPUB, FB2 and many more formats, running on Cervantes, Kindle, Kobo, PocketBook and Android devices
+Name: koreaderVersion: 2025.04🌐 Homepage📦 SourceLicense: GNU Affero General Public License v3.0 only
+
+signal-desktop-bin
+Private, simple, and secure messenger
+Name: signal-desktop-binVersion: 7.71.0🌐 Homepage📦 SourceLicenses: GNU Affero General Public License v3.0 only ▪ Unspecified free software license ▪ Apache License 2.0 ▪ MIT License
+
+signal-desktop
+Private, simple, and secure messenger (nixpkgs build)
+Name: signal-desktopVersion: 7.70.0🌐 Homepage📦 SourceLicenses: GNU Affero General Public License v3.0 only ▪ Unspecified free software license
+
+jadx
+Dex to Java decompiler
+Name: jadxVersion: 1.5.0🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+roboto-serif
+Roboto family of fonts
+Name: roboto-serifVersion: 1.008🌐 Homepage📦 SourceLicense: SIL Open Font License 1.1
+
+am2rlauncher
+Front-end for dealing with AM2R updates and mods
+Name: am2rlauncherVersion: 2.3.0-unstable-2023-11-08🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 only
+
+brickstore
+BrickLink offline management tool
+Name: brickstoreVersion: 2024.12.3🌐 Homepage📦 SourceLicense: GNU General Public License v3.0 or later
+
+jetbrains.idea-ultimate
+Paid-for Java, Kotlin, Groovy and Scala IDE from jetbrains
+Name: idea-ultimateVersion: 2025.1.2🌐 Homepage📦 SourceLicense: Unfree
+
+jetbrains.idea-community-src
+Free Java, Kotlin, Groovy and Scala IDE from jetbrains (built from source)
+Name: idea-communityVersion: 2024.3.1.1🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+jetbrains.idea-community-bin
+Free Java, Kotlin, Groovy and Scala IDE from jetbrains (patched binaries from jetbrains)
+Name: idea-communityVersion: 2025.1.2🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+jetbrains.idea-community
+Free Java, Kotlin, Groovy and Scala IDE from jetbrains (built from source)
+Name: idea-communityVersion: 2024.3.1.1🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+renderdoc
+Single-frame graphics debugger
+Name: renderdocVersion: 1.37Outputs: out dev doc🌐 Homepage📦 SourceLicense: MIT License
+
+twitter-color-emoji
+Color emoji font with a flat visual style, designed and used by Twitter
+Name: twitter-color-emojiVersion: 15.0.2🌐 Homepage📦 SourceLicenses: Apache License 2.0 ▪ SIL Open Font License 1.1 ▪ Creative Commons Attribution 4.0 ▪ MIT License
+
+atari800
+Atari 8-bit emulator
+Name: atari800Version: 5.2.0🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 or later
+
+prevo-tools
+CLI tools for the offline version of the Esperanto dictionary Reta Vortaro
+Name: prevo-toolsVersion: 0.2🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 only
+
+kanjidraw
+Handwritten kanji recognition
+Name: kanjidrawVersion: 0.2.3Outputs: out dist🌐 Homepage📦 SourceLicenses: GNU Affero General Public License v3.0 or later ▪ Creative Commons Attribution Share Alike 3.0
+
+gnomeExtensions.wifi-qrcode
+This extension add a switch to the WiFi menu, in the GNOME system menu, that show a QR Code of the active connection.
+Name: gnome-shell-extension-wifi-qrcodeVersion: 17🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 or later
+
+vimPlugins.vim-android
+Name: vimplugin-vim-androidVersion: 2024-09-05🌐 Homepage📦 Source
+
+sbclPackages.cl-android
+Name: sbcl-cl-androidVersion: 20150804-git📦 Source
+
+home-assistant-component-tests.nfandroidtv
+Open source home automation that puts local control and privacy first
+Name: homeassistant-test-nfandroidtvVersion: 2025.5.2🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+home-assistant-component-tests.androidtv_remote
+Open source home automation that puts local control and privacy first
+Name: homeassistant-test-androidtv_remoteVersion: 2025.5.2🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+home-assistant-component-tests.androidtv
+Open source home automation that puts local control and privacy first
+Name: homeassistant-test-androidtvVersion: 2025.5.2🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+home-assistant-component-tests.android_ip_webcam
+Open source home automation that puts local control and privacy first
+Name: homeassistant-test-android_ip_webcamVersion: 2025.5.2🌐 Homepage📦 SourceLicense: Apache License 2.0
+
+haskellPackages.gogol-android-publisher
+Google Play Developer SDK
+Name: gogol-android-publisherVersion: 0.5.0Outputs: out doc🌐 Homepage📦 SourceLicense: unknown
+
+haskellPackages.gogol-android-enterprise
+Google Play EMM SDK
+Name: gogol-android-enterpriseVersion: 0.5.0Outputs: out doc🌐 Homepage📦 SourceLicense: unknown
+
+emacsPackages.android-mode
+Name: emacs-android-modeVersion: 20250106.1022🌐 Homepage📦 Source
+
+emacsPackages.android-env
+Name: emacs-android-envVersion: 20220810.1449🌐 Homepage📦 Source
+
+stress-ng
+Stress test a computer system
+Name: stress-ngVersion: 0.18.12🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 or later
+
+gnomeExtensions.gnome-bedtime
+Hey Gnome, it's bedtime! Converts to grayscale the entire Gnome workspace by using a smooth transition. Best to use during evening/night.
+Name: gnome-shell-extension-gnome-bedtimeVersion: 22🌐 Homepage📦 SourceLicense: GNU General Public License v2.0 or later

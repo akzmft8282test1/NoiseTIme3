@@ -1,0 +1,38 @@
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 사용자는 자신의 정보만 수정하고 다른 사람의 정보는 읽을 수만 있습니다.
+    match /users/{userId} {
+      allow read;
+      allow create;
+      allow update, delete: if request.auth.uid == userId;
+    }
+
+    // 그룹 멤버만 그룹 정보를 읽고 쓸 수 있습니다.
+    match /groups/{groupId} {
+      allow read: if request.auth.uid in resource.data.members;
+      allow create: if request.auth.uid == request.resource.data.owner_id;
+      allow update: if request.auth.uid == resource.data.owner_id; // 그룹장만 수정 가능
+    }
+
+    // 그룹 멤버만 소음 데이터를 생성하고 읽을 수 있습니다.
+    match /noise_samples/{sampleId} {
+      // 그룹 멤버는 소음 샘플을 읽고 생성할 수 있습니다.
+      allow read: if get(/databases/$(database)/documents/groups/$(resource.data.group_id)).data.members.hasAny([request.auth.uid]);
+      allow create: if get(/databases/$(database)/documents/groups/$(request.resource.data.group_id)).data.members.hasAny([request.auth.uid]);
+      allow update: if false; // 소음 샘플은 수정 불가
+
+      // 그룹 멤버는 댓글을 읽고 쓸 수 있습니다.
+      match /comments/{commentId} {
+        allow read, create: if get(/databases/$(database)/documents/groups/$(get(/databases/$(database)/documents/noise_samples/$(sampleId)).data.group_id)).data.members.hasAny([request.auth.uid]);
+      }
+
+      // 그룹 멤버는 '좋아요'를 누르거나 취소할 수 있습니다.
+      match /likes/{userId} {
+        allow read: if get(/databases/$(database)/documents/groups/$(get(/databases/$(database)/documents/noise_samples/$(sampleId)).data.group_id)).data.members.hasAny([request.auth.uid]);
+        allow create, delete: if request.auth.uid == userId && get(/databases/$(database)/documents/groups/$(get(/databases/$(database)/documents/noise_samples/$(sampleId)).data.group_id)).data.members.hasAny([request.auth.uid]);
+      }
+    }
+  }
+}

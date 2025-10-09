@@ -1,0 +1,29 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "noisetime-youth",
+          "appId": "1:130019319095:android:e5e27f0ac63473a71b0eb2",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "noisetime-youth",
+          "configurations": {
+            "android": "1:130019319095:android:e5e27f0ac63473a71b0eb2",
+            "ios": "1:130019319095:ios:a36de4222f6f0edf1b0eb2",
+            "web": "1:130019319095:web:b96ca95a537ae1931b0eb2"
+          }
+        }
+      }
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  },
+  "functions": {
+    "source": "functions"
+  }
+}
