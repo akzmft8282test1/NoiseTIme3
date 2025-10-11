@@ -1,8 +1,15 @@
+계
+import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:noise_meter/noise_meter.dart';
+import 'package:noisetime/screens/admin_screen.dart';
+import 'package:noisetime/screens/profile_screen.dart';
 import 'package:noisetime/services/auth_service.dart';
-import 'package:noisetime/services/group_service.dart'; // 새로 만든 GroupService를 가져옵니다.
-import 'package:supabase_flutter/supabase_flutter.dart'; // Supabase Client 접근을 위해 추가
+import 'package:noisetime/services/group_service.dart';
+import 'package:permission_handler/permission_handler.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 class GroupScreen extends StatefulWidget {
   const GroupScreen({super.key});
@@ -12,15 +19,125 @@ class GroupScreen extends StatefulWidget {
 }
 
 class _GroupScreenState extends State<GroupScreen> {
-  // 서비스들을 초기화합니다.
   final _groupService = GroupService();
-  final _authService = AuthService(); // 로그아웃을 위해 필요
-  
-  // 다이얼로그에서 사용할 컨트롤러
+  final _authService = AuthService();
+  final _supabase = Supabase.instance.client;
+
   final _groupNameController = TextEditingController();
   final _groupIdController = TextEditingController();
 
-  // 그룹 생성 다이얼로그를 보여주는 함수
+  // 소음 측정 관련 상태 변수 추가
+  bool _isRecording = false;
+  NoiseReading? _latestReading;
+  StreamSubscription<NoiseReading>? _noiseSubscription;
+  NoiseMeter? _noiseMeter;
+
+  @override
+  void initState() {
+    super.initState();
+    _noiseMeter = NoiseMeter(onError);
+  }
+
+  @override
+  void dispose() {
+    _noiseSubscription?.cancel();
+    super.dispose();
+  }
+  
+  void onError(Object error) {
+    print(error.toString());
+    _isRecording = false;
+    if (mounted) {
+      setState(() {});
+    }
+  }
+
+  Future<void> _requestPermission() async {
+    final status = await Permission.microphone.request();
+    if (status != PermissionStatus.granted) {
+      throw 'Microphone permission not granted';
+    }
+  }
+
+  void start() async {
+    try {
+      await _requestPermission();
+      _noiseSubscription = _noiseMeter?.noise.listen((noiseReading) {
+        if (mounted) {
+          setState(() {
+            _latestReading = noiseReading;
+          });
+        }
+      });
+      if (mounted) {
+        setState(() => _isRecording = true);
+      }
+    } catch (err) {
+      print(err);
+    }
+  }
+
+  void stop() async {
+    try {
+      if (_noiseSubscription != null) {
+        _noiseSubscription!.cancel();
+        _noiseSubscription = null;
+      }
+      if (mounted) {
+        setState(() => _isRecording = false);
+      }
+    } catch (err) {
+      print('stopRecorder error: $err');
+    }
+  }
+
+  // 데이터 저장 로직 (수정됨)
+  Future<void> _saveNoiseData() async {
+    if (_latestReading == null) return;
+
+    final meanDecibel = _latestReading!.meanDecibel;
+    final messenger = ScaffoldMessenger.of(context);
+    
+    try {
+      // 현재 사용자 ID 가져오기
+      final userId = _authService.currentUser?.id;
+      if (userId == null) {
+        throw Exception('User not logged in.');
+      }
+
+      // 현재 사용자의 group_id 가져오기
+      final profileResponse = await _supabase
+          .from('profiles')
+          .select('group_id')
+          .eq('id', userId)
+          .single();
+      
+      final groupId = profileResponse['group_id'] as String?;
+
+      if (groupId == null) {
+        throw Exception('User is not in a group.');
+      }
+      
+      // 올바른 인자들로 서비스 함수 호출
+      await _groupService.saveNoiseSample(groupId, userId, meanDecibel);
+
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Saved noise level: ${meanDecibel.toStringAsFixed(2)} dB'),
+          backgroundColor: Colors.green,
+        ),
+      );
+    } catch (e) {
+      messenger.showSnackBar(
+        SnackBar(
+          content: Text('Failed to save noise data: ${e.toString()}'),
+          backgroundColor: Theme.of(context).colorScheme.error,
+        ),
+      );
+    }
+  }
+
+
   void _showCreateGroupDialog() {
     showDialog(
       context: context,
@@ -45,7 +162,7 @@ class _GroupScreenState extends State<GroupScreen> {
               try {
                 await _groupService.createGroup(_groupNameController.text);
                 _groupNameController.clear();
-                navigator.pop(); // 성공 시 다이얼로그 닫기
+                navigator.pop();
               } catch (e) {
                 messenger.showSnackBar(SnackBar(
                   content: Text('Failed to create group: ${e.toString()}'),
@@ -60,7 +177,6 @@ class _GroupScreenState extends State<GroupScreen> {
     );
   }
 
-  // 그룹 가입 다이얼로그 (아직 기능 구현 안됨)
   void _showJoinGroupDialog() {
      showDialog(
       context: context,
@@ -77,7 +193,6 @@ class _GroupScreenState extends State<GroupScreen> {
           ),
           ElevatedButton(
             onPressed: () {
-               // TODO: 그룹 가입 로직 구현
                ScaffoldMessenger.of(context).showSnackBar(
                  const SnackBar(content: Text('This feature is not yet implemented.')),
                );
@@ -97,16 +212,30 @@ class _GroupScreenState extends State<GroupScreen> {
         title: const Text('My Group'),
         actions: [
           IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const ProfileScreen()),
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.admin_panel_settings),
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => const AdminScreen()),
+              );
+            },
+          ),
+          IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
               await _authService.signOut();
-              // AuthGate가 상태를 감지하여 자동으로 로그인 화면으로 보냅니다.
             },
           )
         ],
       ),
       body: StreamBuilder<Map<String, dynamic>?>(
-        // 1. GroupService를 통해 현재 유저의 프로필 정보를 실시간으로 받습니다.
         stream: _groupService.getProfileStream(),
         builder: (context, userSnapshot) {
           if (userSnapshot.connectionState == ConnectionState.waiting) {
@@ -119,12 +248,10 @@ class _GroupScreenState extends State<GroupScreen> {
           final userData = userSnapshot.data!;
           final groupId = userData['group_id'];
 
-          // 2. 프로필에 group_id가 없는 경우, 그룹 생성/참여 화면을 보여줍니다.
           if (groupId == null) {
             return _buildNoGroupView();
           }
 
-          // 3. group_id가 있는 경우, 해당 그룹 정보를 스트림으로 받아와 화면을 구성합니다.
           return StreamBuilder<Map<String, dynamic>?>(
             stream: _groupService.getGroupStream(groupId as String),
             builder: (context, groupSnapshot) {
@@ -141,10 +268,25 @@ class _GroupScreenState extends State<GroupScreen> {
           );
         },
       ),
+       // 측정/저장 플로팅 버튼 추가
+      floatingActionButton: _isRecording
+        ? FloatingActionButton.extended(
+            onPressed: () {
+              stop();
+              _saveNoiseData();
+            },
+            label: const Text('Stop & Save'),
+            icon: const Icon(Icons.stop),
+            backgroundColor: Colors.red,
+          )
+        : FloatingActionButton(
+            onPressed: start,
+            child: const Icon(Icons.mic),
+        ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
 
-  // 그룹이 없을 때 보여줄 위젯
   Widget _buildNoGroupView() {
     return Center(
       child: Column(
@@ -160,7 +302,7 @@ class _GroupScreenState extends State<GroupScreen> {
           const Text('or'),
           const SizedBox(height: 8),
           ElevatedButton(
-            onPressed: _showJoinGroupDialog, // 가입 기능은 아직 미구현
+            onPressed: _showJoinGroupDialog,
             child: const Text('Join a Group'),
           ),
         ],
@@ -168,12 +310,10 @@ class _GroupScreenState extends State<GroupScreen> {
     );
   }
 
-  // 그룹 상세 정보를 보여줄 위젯
   Widget _buildGroupDetailsView(Map<String, dynamic> groupData) {
     final isOwner = groupData['owner_id'] == Supabase.instance.client.auth.currentUser!.id;
-    
-    // TODO: 멤버 목록을 별도의 쿼리로 가져와야 합니다.
-    // 현재는 임시로 그룹 이름과 소유자 여부만 표시합니다.
+    final noiseLevel = _latestReading?.meanDecibel ?? 0.0;
+
     return Padding(
       padding: const EdgeInsets.all(16.0),
       child: Column(
@@ -182,17 +322,73 @@ class _GroupScreenState extends State<GroupScreen> {
           Text(groupData['name'] as String, style: Theme.of(context).textTheme.headlineMedium),
           const SizedBox(height: 24),
           Text('Group ID: ${groupData['id']}', style: Theme.of(context).textTheme.bodySmall),
-          const SizedBox(height: 24),
-          Text('Members', style: Theme.of(context).textTheme.titleLarge),
-          const Expanded(
+          const SizedBox(height: 32),
+          
+          // 소음 측정 UI
+          Expanded(
             child: Center(
-              child: Text('(Member list will be shown here)'), // 임시 텍스트
-            )
+              child: NoiseGraph(noiseLevel: noiseLevel),
+            ),
           ),
+          
+          const SizedBox(height: 32),
           if(isOwner) ...[
               Text('Noise Penalty: ...%', style: Theme.of(context).textTheme.titleLarge),
-              // TODO: 페널티 설정 슬라이더 구현
+              const SizedBox(height: 80), // 여백 추가
           ]
+        ],
+      ),
+    );
+  }
+}
+
+
+// 소음 레벨을 보여주는 원형 그래프 위젯
+class NoiseGraph extends StatelessWidget {
+  final double noiseLevel;
+  const NoiseGraph({super.key, required this.noiseLevel});
+
+  @override
+  Widget build(BuildContext context) {
+    // 0-120 dB 범위를 0-100으로 정규화
+    final normalizedValue = (noiseLevel.clamp(0, 120) / 120) * 100;
+    
+    return SizedBox(
+      width: 250,
+      height: 250,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          // 배경 원
+          SizedBox(
+            width: 250,
+            height: 250,
+            child: CircularProgressIndicator(
+              value: 1,
+              strokeWidth: 20,
+              color: Colors.grey.shade300,
+            ),
+          ),
+          // 소음 레벨 원
+          SizedBox(
+            width: 250,
+            height: 250,
+            child: CircularProgressIndicator(
+              value: normalizedValue / 100,
+              strokeWidth: 20,
+              valueColor: AlwaysStoppedAnimation<Color>(
+                // 소음 레벨에 따라 색상 변경
+                normalizedValue > 70 ? Colors.red :
+                normalizedValue > 40 ? Colors.orange :
+                Colors.green
+              ),
+            ),
+          ),
+          // 데시벨 텍스트
+          Text(
+            '${noiseLevel.toStringAsFixed(1)} dB',
+            style: Theme.of(context).textTheme.headlineLarge,
+          ),
         ],
       ),
     );

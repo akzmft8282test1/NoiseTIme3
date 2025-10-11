@@ -9,6 +9,7 @@
     pkgs.docker
     # [고객님 제안 적용] npm을 사용하기 위해 Node.js를 설치합니다.
     pkgs.nodejs_22
+    pkgs.supabase-cli
   ];
 
   # Docker 서비스를 활성화합니다.
