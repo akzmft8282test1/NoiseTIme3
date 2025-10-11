@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:noisetime/services/auth_service.dart';
 
@@ -54,17 +53,25 @@ class _SignupScreenState extends State<SignupScreen> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () async {
+                // await 호출 전에 BuildContext를 사용하는 객체들을 변수에 저장
+                final navigator = Navigator.of(context);
+                final scaffoldMessenger = ScaffoldMessenger.of(context);
+
                 final user = await _authService.createUserWithEmailAndPassword(
                   email: _emailController.text,
                   password: _passwordController.text,
                   displayName: _nameController.text,
                 );
+                
+                // await 이후에 위젯이 화면에 있는지 확인
+                if (!mounted) return;
+
                 if (user != null) {
-                  // 회원가입 성공 시 로그인 화면으로 돌아감
-                  Navigator.pop(context);
+                  // 회원가입 성공 시 미리 저장해둔 navigator를 사용하여 화면을 닫음
+                  navigator.pop();
                 } else {
-                  // 회원가입 실패 시 사용자에게 알림
-                  ScaffoldMessenger.of(context).showSnackBar(
+                  // 회원가입 실패 시 미리 저장해둔 scaffoldMessenger를 사용하여 SnackBar 표시
+                  scaffoldMessenger.showSnackBar(
                     const SnackBar(content: Text('회원가입에 실패했습니다.')),
                   );
                 }

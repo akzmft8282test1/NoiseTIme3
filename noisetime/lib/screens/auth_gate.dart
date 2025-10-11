@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:supabase_flutter/supabase_flutter.dart'; // Firebase 대신 Supabase를 가져옵니다.
 import 'package:noisetime/screens/home_screen.dart';
 import 'package:noisetime/screens/login_screen.dart';
 
@@ -9,14 +9,23 @@ class AuthGate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<User?>(
-      stream: FirebaseAuth.instance.authStateChanges(),
+    // Supabase의 인증 상태 변경 스트림을 사용합니다.
+    return StreamBuilder<AuthState>(
+      stream: Supabase.instance.client.auth.onAuthStateChange,
       builder: (context, snapshot) {
-        if (snapshot.hasData) {
-          // 사용자가 로그인 되어 있으면 HomeScreen을 보여줍니다.
+        // 첫 인증 상태를 기다리는 동안 로딩 인디케이터를 보여줍니다.
+        if (!snapshot.hasData) {
+          return const Scaffold(
+            body: Center(child: CircularProgressIndicator()),
+          );
+        }
+
+        // 세션(session)이 있는지 확인합니다.
+        if (snapshot.data?.session != null) {
+          // 세션이 있다면 사용자가 로그인된 것이므로 HomeScreen을 보여줍니다.
           return const HomeScreen();
         } else {
-          // 사용자가 로그인 되어 있지 않으면 LoginScreen을 보여줍니다.
+          // 세션이 없다면 로그인되지 않은 것이므로 LoginScreen을 보여줍니다.
           return const LoginScreen();
         }
       },

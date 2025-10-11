@@ -20,6 +20,7 @@ dependencies:
   noise_meter: ^5.0.2
   fl_chart: ^0.71.0
   firebase_messaging: ^16.0.2
+  supabase_flutter: ^2.10.3
 
 dev_dependencies:
   flutter_test:

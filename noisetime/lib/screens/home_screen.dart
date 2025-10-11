@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:noise_meter/noise_meter.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'dart:async';
 
+import 'package:noisetime/services/noise_service.dart'; // NoiseService 가져오기
 import 'group_screen.dart';
 import 'report_screen.dart';
 
+// HomeScreen은 변경사항 없음
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -74,47 +74,31 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 }
 
+
+// NoiseMeasurementScreen 수정
 class NoiseMeasurementScreen extends StatefulWidget {
   const NoiseMeasurementScreen({super.key});
 
   @override
-  _NoiseMeasurementScreenState createState() => _NoiseMeasurementScreenState();
+  NoiseMeasurementScreenState createState() => NoiseMeasurementScreenState();
 }
 
-class _NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
+class NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
   bool _isRecording = false;
   StreamSubscription<NoiseReading>? _noiseSubscription;
   NoiseMeter? _noiseMeter;
   List<FlSpot> _noiseData = [];
   double _xValue = 0;
-  final _auth = FirebaseAuth.instance;
-  final _firestore = FirebaseFirestore.instance;
-  String? _anonId;
   Timer? _debounce;
 
-  @override
-  void initState() {
-    super.initState();
-    _loadAnonId();
-  }
+  // NoiseService 인스턴스 생성
+  final NoiseService _noiseService = NoiseService();
 
   @override
   void dispose() {
     _noiseSubscription?.cancel();
     _debounce?.cancel();
     super.dispose();
-  }
-
-  Future<void> _loadAnonId() async {
-    final user = _auth.currentUser;
-    if (user != null) {
-      final userDoc = await _firestore.collection('users').doc(user.uid).get();
-      if (mounted) {
-        setState(() {
-          _anonId = userDoc.data()?['anon_id'];
-        });
-      }
-    }
   }
 
   void onData(NoiseReading noiseReading) {
@@ -127,37 +111,24 @@ class _NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
       });
     }
 
-    if (noiseReading.meanDecibel > 65) { // 기준 데시벨 상향
-      // Debounce: 10초에 한 번만 저장
+    // 특정 데시벨(예: 65dB)을 넘으면 데이터를 저장
+    if (noiseReading.meanDecibel > 65) { 
+      // Debounce: 10초에 한 번만 저장 로직을 호출
       if (_debounce?.isActive ?? false) return;
       _debounce = Timer(const Duration(seconds: 10), () {});
       _saveNoiseData(noiseReading.meanDecibel);
     }
   }
 
+  // 데이터 저장 로직을 NoiseService를 사용하도록 변경
   Future<void> _saveNoiseData(double decibel) async {
-    final user = _auth.currentUser;
-    if (user == null || _anonId == null) return;
-
     try {
-      final userDoc = await _firestore.collection('users').doc(user.uid).get();
-      final groupId = userDoc.data()?['group_id'];
-
-      if (groupId == null) return; // 그룹이 없으면 저장하지 않음
-
-      await _firestore.collection('noise_samples').add({
-        'timestamp': FieldValue.serverTimestamp(),
-        'decibel': decibel,
-        'user_id': user.uid,
-        'group_id': groupId,
-        'anon_id': _anonId,
-      });
-
+      await _noiseService.addNoiseSample(decibel);
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('기준 초과 소음 (${decibel.toStringAsFixed(1)} dB)이 기록되었습니다.'),
-            backgroundColor: Colors.amber,
+            backgroundColor: Colors.amber[800], // 좀 더 잘 보이는 색으로 변경
           ),
         );
       }
@@ -166,7 +137,7 @@ class _NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text('데이터 저장 실패: $e'),
-            backgroundColor: Colors.red,
+            backgroundColor: Theme.of(context).colorScheme.error,
           ),
         );
       }
@@ -175,15 +146,24 @@ class _NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
 
 
   void _start() {
-    _noiseMeter = NoiseMeter(onData);
-    _noiseSubscription = _noiseMeter!.noise.listen(onData);
-    if (mounted) {
-      setState(() {
-        _isRecording = true;
-        _noiseData = [];
-        _xValue = 0;
-      });
-    }
+    // 권한 확인 로직 추가
+    Permission.microphone.request().then((status) {
+      if (status == PermissionStatus.granted) {
+        _noiseMeter = NoiseMeter();
+        _noiseSubscription = _noiseMeter!.noise.listen(onData);
+        if (mounted) {
+          setState(() {
+            _isRecording = true;
+            _noiseData = [];
+            _xValue = 0;
+          });
+        }
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('마이크 권한이 거부되었습니다. 측정을 시작할 수 없습니다.')),
+        );
+      }
+    });
   }
 
   void _stop() {
@@ -194,7 +174,7 @@ class _NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
   }
 
   Widget _buildChart() {
-    // ... (차트 코드는 변경 없음)
+    // 차트 UI는 변경 없음
     return LineChart(
       LineChartData(
         minX: _noiseData.isNotEmpty ? _noiseData.first.x : 0,
@@ -216,8 +196,8 @@ class _NoiseMeasurementScreenState extends State<NoiseMeasurementScreen> {
               show: true,
               gradient: LinearGradient(
                 colors: [
-                  Theme.of(context).primaryColor.withOpacity(0.3),
-                  Theme.of(context).primaryColor.withOpacity(0.0),
+                  Theme.of(context).primaryColor.withAlpha(77),
+                  Theme.of(context).primaryColor.withAlpha(0),
                 ],
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,

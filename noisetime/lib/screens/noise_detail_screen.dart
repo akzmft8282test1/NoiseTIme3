@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:intl/intl.dart';
 import 'package:noisetime/models/noise_sample.dart';
+import 'package:noisetime/services/community_service.dart'; // 서비스 임포트
 
 class NoiseDetailScreen extends StatefulWidget {
   final NoiseSample noiseSample;
@@ -10,131 +10,103 @@ class NoiseDetailScreen extends StatefulWidget {
   const NoiseDetailScreen({super.key, required this.noiseSample});
 
   @override
-  _NoiseDetailScreenState createState() => _NoiseDetailScreenState();
+  NoiseDetailScreenState createState() => NoiseDetailScreenState();
 }
 
-class _NoiseDetailScreenState extends State<NoiseDetailScreen> {
-  final TextEditingController _commentController = TextEditingController();
-  final User? currentUser = FirebaseAuth.instance.currentUser;
-  late final DocumentReference _sampleRef;
-
-  @override
-  void initState() {
-    super.initState();
-    _sampleRef = FirebaseFirestore.instance.collection('noise_samples').doc(widget.noiseSample.id);
-  }
+class NoiseDetailScreenState extends State<NoiseDetailScreen> {
+  final _commentController = TextEditingController();
+  final _communityService = CommunityService(); // 서비스 인스턴스 생성
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Details for ${widget.noiseSample.anonId}'),
+        title: const Text('소음 상세 정보'), // 제목 변경
       ),
       body: Column(
         children: [
+          // 소음 정보 표시 영역
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Noise Level: ${widget.noiseSample.decibel.toStringAsFixed(1)} dB', style: Theme.of(context).textTheme.titleLarge),
+                Text('소음 레벨: ${widget.noiseSample.dbLevel.toStringAsFixed(1)} dB',
+                    style: Theme.of(context).textTheme.headlineSmall),
                 const SizedBox(height: 8),
-                Text('Recorded at: ${widget.noiseSample.timestamp.toDate()}'),
+                Text('측정 시각: ${DateFormat('yyyy-MM-dd HH:mm').format(widget.noiseSample.timestamp)}'),
+                 const SizedBox(height: 20),
+                const Divider(),
               ],
             ),
           ),
-          const Divider(),
-          _buildLikesSection(),
-          const Divider(),
+          // 댓글 목록
           Expanded(
             child: _buildCommentsList(),
           ),
+          // 댓글 입력 필드
           _buildCommentInputField(),
         ],
       ),
     );
   }
 
-  Widget _buildLikesSection() {
-    return StreamBuilder<QuerySnapshot>(
-      stream: _sampleRef.collection('likes').snapshots(),
-      builder: (context, snapshot) {
-        if (!snapshot.hasData || currentUser == null) {
-          return const Padding(
-            padding: EdgeInsets.symmetric(vertical: 12.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.favorite_border),
-                SizedBox(width: 8),
-                Text('0'),
-              ],
-            ),
-          );
-        }
-
-        final likesCount = snapshot.data!.docs.length;
-        final isLiked = snapshot.data!.docs.any((doc) => doc.id == currentUser!.uid);
-
-        return Padding(
-          padding: const EdgeInsets.symmetric(vertical: 4.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              IconButton(
-                icon: Icon(
-                  isLiked ? Icons.favorite : Icons.favorite_border,
-                  color: isLiked ? Colors.red : Colors.grey,
-                ),
-                onPressed: _toggleLike,
-              ),
-              Text('$likesCount'),
-            ],
-          ),
-        );
-      },
-    );
-  }
-
+  // 댓글 목록을 빌드하는 위젯
   Widget _buildCommentsList() {
-    return StreamBuilder<QuerySnapshot>(
-      stream: _sampleRef.collection('comments').orderBy('timestamp', descending: true).snapshots(),
+    return StreamBuilder<List<Map<String, dynamic>>>(
+      // 1. CommunityService를 통해 댓글 스트림을 가져옵니다.
+      stream: _communityService.getCommentsStream(widget.noiseSample.id),
       builder: (context, snapshot) {
-        if (!snapshot.hasData) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
           return const Center(child: CircularProgressIndicator());
         }
-        if (snapshot.data!.docs.isEmpty) {
-          return const Center(child: Text("Be the first to comment!"));
+        if (snapshot.hasError) {
+           return Center(child: Text("댓글을 불러오는데 실패했습니다: ${snapshot.error}"));
+        }
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return const Center(child: Text("가장 먼저 댓글을 남겨보세요!"));
         }
 
-        return ListView( 
-          children: snapshot.data!.docs.map((doc) {
-            final commentData = doc.data() as Map<String, dynamic>;
+        final comments = snapshot.data!;
+
+        return ListView.builder(
+          itemCount: comments.length,
+          itemBuilder: (context, index) {
+            final comment = comments[index];
+            final createdAt = DateTime.parse(comment['created_at']);
+
+            // TODO: 댓글 작성자의 이름을 표시하려면 profiles 테이블과 JOIN해야 합니다.
+            // 지금은 임시로 profile_id를 표시합니다.
             return ListTile(
-              title: Text(commentData['text']),
-              subtitle: Text("by ${commentData['anon_id'] ?? 'anon'}"),
+              title: Text(comment['content'] ?? 'Empty comment'),
+              subtitle: Text('by: ${comment['profile_id'].toString().substring(0, 8)}...'),
               trailing: Text(
-                (commentData['timestamp'] as Timestamp).toDate().toString(),
+                DateFormat('MM-dd HH:mm').format(createdAt),
                 style: Theme.of(context).textTheme.bodySmall,
               ),
             );
-          }).toList(),
+          },
         );
       },
     );
   }
 
+  // 댓글 입력 필드를 빌드하는 위젯
   Widget _buildCommentInputField() {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.fromLTRB(8, 8, 8, MediaQuery.of(context).padding.bottom + 8),
       child: Row(
         children: [
           Expanded(
             child: TextField(
               controller: _commentController,
               decoration: const InputDecoration(
-                hintText: 'Add a comment...',
-                border: OutlineInputBorder(),
+                hintText: '댓글 남기기...',
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  borderSide: BorderSide.none,
+                ),
               ),
             ),
           ),
@@ -147,33 +119,23 @@ class _NoiseDetailScreenState extends State<NoiseDetailScreen> {
     );
   }
 
+  // 댓글을 게시하는 함수
   void _postComment() async {
-    if (currentUser == null || _commentController.text.trim().isEmpty) return;
-    
-    // In a real app, you would fetch the user's anon_id from their user profile
-    final userDoc = await FirebaseFirestore.instance.collection('users').doc(currentUser!.uid).get();
-    final anonId = userDoc.data()?['anon_id'] ?? 'anonymous';
+    final content = _commentController.text.trim();
+    if (content.isEmpty) return;
 
-    await _sampleRef.collection('comments').add({
-      'text': _commentController.text.trim(),
-      'anon_id': anonId,
-      'user_id': currentUser!.uid, // Store real UID for potential future use (e.g., moderation)
-      'timestamp': Timestamp.now(),
-    });
-
-    _commentController.clear();
-  }
-
-  void _toggleLike() async {
-    if (currentUser == null) return;
-
-    final likeRef = _sampleRef.collection('likes').doc(currentUser!.uid);
-    final likeDoc = await likeRef.get();
-
-    if (likeDoc.exists) {
-      await likeRef.delete();
-    } else {
-      await likeRef.set({'liked_at': Timestamp.now()});
+    final messenger = ScaffoldMessenger.of(context);
+    try {
+      // 2. CommunityService를 통해 댓글을 추가합니다.
+      await _communityService.addComment(widget.noiseSample.id, content);
+      _commentController.clear(); // 입력 필드 초기화
+      // 키보드를 내립니다.
+      FocusScope.of(context).unfocus(); 
+    } catch (e) {
+      messenger.showSnackBar(SnackBar(
+        content: Text('댓글 작성 실패: ${e.toString()}'),
+        backgroundColor: Theme.of(context).colorScheme.error,
+      ));
     }
   }
 }

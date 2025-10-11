@@ -1,22 +1,25 @@
 
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'package:supabase_flutter/supabase_flutter.dart'; // Firebase 대신 Supabase 패키지를 가져옵니다.
 import 'package:noisetime/screens/auth_gate.dart';
-import 'package:noisetime/services/notification_service.dart'; // NotificationService import
-import 'firebase_options.dart';
+import 'package:noisetime/services/notification_service.dart'; // NotificationService는 그대로 사용합니다.
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
+
+  // Firebase 초기화 코드를 제거하고 아래 Supabase 초기화 코드로 대체합니다.
+  await Supabase.initialize(
+    url: 'https://ntooyuilabwqjeuymnkl.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im50b295dWlsYWJ3cWpldXltbmtsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjAwODMyNTQsImV4cCI6MjA3NTY1OTI1NH0.Khzt1gFjbTy58ysfTN75sclwTFOQih8XP3VdtXf8RHs',
   );
 
-  // Initialize NotificationService
+  // NotificationService 초기화는 그대로 둡니다.
   await NotificationService().initialize();
 
   runApp(const MyApp());
 }
 
+// MyApp 위젯의 내용은 변경할 필요가 없습니다.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -25,30 +28,23 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'NoiseTime',
       theme: ThemeData(
-        // 전체적인 색상 톤을 부드럽게 설정
         primarySwatch: Colors.indigo,
-        // 시각적 피드백을 부드럽게 변경
         splashFactory: InkRipple.splashFactory,
-        // 전체적인 폰트 스타일 설정
         textTheme: const TextTheme(
-          // AppBar 제목 스타일
           titleLarge: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
-          // 본문 텍스트 스타일
           bodyMedium: TextStyle(
             fontSize: 16,
             color: Colors.black87,
           ),
         ),
-        // AppBar 테마 설정
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.indigo,
           elevation: 0,
         ),
-        // 하단 네비게이션 바 테마 설정
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           selectedItemColor: Colors.indigo,
           unselectedItemColor: Colors.grey,

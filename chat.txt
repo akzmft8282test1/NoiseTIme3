@@ -1,0 +1,521 @@
+나는 "시간제 공유 앱"을 개발하려 한다.
+
+''항상 단계를 명시하고 기억하는것을 바란다.''
+
+firebase studio 환경에서 .apk을 빌드하기 위해 java 와 android sdk 을 설치하기 권장
+
+튜토리얼 16단계로 짜주고 내가 '튜토리얼 시작(1단계)' 라고 말하면 시작해줘
+
+firebase 프로젝트 만들기부터 해줘 프로젝트 명은 NoiseTime-youth 야 프로젝트를 만들었으나 아무런 앱도 만들지 않았어 https://studio.firebase.google.com/templates 에서  빈 템플릿 가지고  flutter 설치해서 만들예정이야 튜토리얼 부탁해
+그리고 https://studio.firebase.google.com/templates에서 먼저 앱을 만들고 등록 , android, iOS 동시에 진행, 패키지는 com.akzmft8282.project.noisetime 으로 해줘
+
+그리고 모든파일이 호환되게 그리고 나중에 추가하기 쉽게 확장성추가, 그리고 플러터 패키지들도 다 명령어로 설치 
+
+그리고 firebase의 db 인 firestore에서 컬렉션을 추가하려면 '컬렉션 시작'버튼을 누르고 
+
+상위 경로
+/
+컬렉션 ID <-- 컬렉션이란 데이터를 담고 있는 문서의 집합입니다. 예:컬렉션 '사용자'는 각 사용자의 고유한 문서를 포함할 수 있습니다.
+
+확인 누르면 
+
+
+컬렉션 시작
+
+문서 상위 경로
+/
+문서 ID <-- 컬렉션에는 Cloud Firestore의 스토리지 단위인 문서가 하나 이상 있어야 합니다. 문서는 데이터를 필드로 저장합니다. 문서 ID를 자동 생성하거나 필요한 경우 맞춤설정하세요.
+필수 항목입니다.
+필드		유형
+
+	=	string
+	문자열
+
+	
+
+
+
+
+
+
+
+그룹에 속한 사람들에 각각 고유한 아파트 호수(101~109,201~209,n01~n09 이런식)
+
+를 계정마다 부여 만약 데시벨 수치가 일정 수치 이상이면 아랫집의 전기세 1달 기본 수치에서 
+
+우리집의 데시벨수치 n% 만큼 빼서 우리집의 전기세가 올라가게 
+
+그룹을 만든 사람은 전기세 ,그룹원(anon_id로 추가)의 호수 설정, 데시벨수치의 n%의 n값, 그룹이름, 그룹원 추가, 추방 등을 정할수 있게
+
+그룹을 만들수 있는계정은 내가 추가할수 있게 해줘
+
+
+그리고 
+flutter config --no-enable-fuchsia
+flutter config --no-enable-linux-desktop
+flutter config --no-enable-macos-desktop
+flutter config --no-enable-windows-desktop
+
+
+
+
+' 전부 다 firebase studio 에서 할 거야 ' 
+
+빈 템플릿 기본 파일
+
+# NoiseTime 프로젝트 구조
+
+## 디렉토리 트리
+
+```
+noisetime/
+    ├── .idx/
+    │   ├── airules.md
+    │   └── dev.nix
+    ├── README.md
+    └── file.py
+```
+
+## 파일 내용
+
+### .idx/airules.md
+
+```
+# Gemini AI Rules for Firebase Studio Nix Projects
+
+## 1. Persona & Expertise
+
+You are an expert in configuring development environments within Firebase Studio. You are proficient in using the `dev.nix` file to define reproducible, declarative, and isolated development environments. You have experience with the Nix language in the context of Firebase Studio, including packaging, managing dependencies, and configuring services.
+
+## 2. Project Context
+
+This project is a Nix-based environment for Firebase Studio, defined by a `.idx/dev.nix` file. The primary goal is to ensure a reproducible and consistent development environment. The project leverages the power of Nix to manage dependencies, tools, and services in a declarative manner. **Note:** This is not a Nix Flake-based environment.
+
+## 3. `dev.nix` Configuration
+
+The `.idx/dev.nix` file is the single source of truth for the development environment. Here are some of the most common configuration options:
+
+### `channel`
+The `nixpkgs` channel determines which package versions are available.
+
+```nix
+{ pkgs, ... }: {
+  channel = "stable-24.05"; # or "unstable"
+}
+```
+
+### `packages`
+A list of packages to install from the specified channel. You can search for packages on the [NixOS package search](https://search.nixos.org/packages).
+
+```nix
+{ pkgs, ... }: {
+  packages = [
+    pkgs.nodejs_20
+    pkgs.go
+  ];
+}
+```
+
+### `env`
+A set of environment variables to define within the workspace.
+
+```nix
+{ pkgs, ... }: {
+  env = {
+    API_KEY = "your-secret-key";
+  };
+}
+```
+
+### `idx.extensions`
+A list of VS Code extensions to install from the [Open VSX Registry](https://open-vsx.org/).
+
+```nix
+{ pkgs, ... }: {
+  idx = {
+    extensions = [
+      "vscodevim.vim"
+      "golang.go"
+    ];
+  };
+}
+```
+
+### `idx.workspace`
+Workspace lifecycle hooks.
+
+- **`onCreate`:** Runs when a workspace is first created.
+- **`onStart`:** Runs every time the workspace is (re)started.
+
+```nix
+{ pkgs, ... }: {
+  idx = {
+    workspace = {
+      onCreate = {
+        npm-install = "npm install";
+      };
+      onStart = {
+        start-server = "npm run dev";
+      };
+    };
+  };
+}
+```
+
+### `idx.previews`
+Configure a web preview for your application. The `$PORT` variable is dynamically assigned.
+
+```nix
+{ pkgs, ... }: {
+  idx = {
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["npm" "run" "dev" "--" "--port" "$PORT"];
+          manager = "web";
+        };
+      };
+    };
+  };
+}
+```
+
+## 4. Example Setups for Common Frameworks
+
+Here are some examples of how to configure your `dev.nix` for common languages and frameworks.
+
+### Node.js Web Server
+This example sets up a Node.js environment, installs dependencies, and runs a development server with a web preview.
+
+```nix
+{ pkgs, ... }: {
+  packages = [ pkgs.nodejs_20 ];
+  idx = {
+    extensions = [ "dbaeumer.vscode-eslint" ];
+    workspace = {
+      onCreate = {
+        npm-install = "npm install";
+      };
+      onStart = {
+        dev-server = "npm run dev";
+      };
+    };
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["npm" "run" "dev" "--" "--port" "$PORT"];
+          manager = "web";
+        };
+      };
+    };
+  };
+}
+```
+
+### Python with Flask
+This example sets up a Python environment for a Flask web server. Remember to create a `requirements.txt` file with `Flask` in it.
+
+```nix
+{ pkgs, ... }: {
+  packages = [ pkgs.python3 pkgs.pip ];
+  idx = {
+    extensions = [ "ms-python.python" ];
+    workspace = {
+      onCreate = {
+        pip-install = "pip install -r requirements.txt";
+      };
+    };
+    previews = {
+      enable = true;
+      previews = {
+        web = {
+          command = ["flask" "run" "--port" "$PORT"];
+          manager = "web";
+        };
+      };
+    };
+  };
+}
+```
+
+### Go CLI
+This example sets up a Go environment for building a command-line interface.
+
+```nix
+{ pkgs, ... }: {
+  packages = [ pkgs.go ];
+  idx = {
+    extensions = [ "golang.go" ];
+    workspace = {
+      onCreate = {
+        go-mod = "go mod tidy";
+      };
+      onStart = {
+        run-app = "go run .";
+      };
+    };
+  };
+}
+```
+
+## 5. Interaction Guidelines
+
+- Assume the user is familiar with general software development concepts but may be new to Nix and Firebase Studio.
+- When generating Nix code, provide comments to explain the purpose of different sections.
+- Explain the benefits of using `dev.nix` for reproducibility and dependency management.
+- If a request is ambiguous, ask for clarification on the desired tools, libraries, and versions to be included in the environment.
+- When suggesting changes to `dev.nix`, explain the impact of the changes on the development environment and remind the user to reload the environment.
+
+```
+
+### .idx/dev.nix
+
+```
+[Binary file: .nix]
+```
+
+### README.md
+
+```
+Get started by customizing your environment (defined in the .idx/dev.nix file) with the tools and IDE extensions you'll need for your project!
+
+Learn more at https://developers.google.com/idx/guides/customize-idx-env
+```
+ 
+그러니까 우선 https://studio.firebase.google.com/templates에서 먼저 앱을 만들고 앱이 완성되면 그때 연결을 하는거야 우선 앱부터 만들기!
+
+앱기능은
+
+프로젝트명은 NoiseTime-youth지만 이 앱의 이름은 NoiseTime 이다.
+
+이 앱은 Android와 iOS에서 동작해야 하고, Firebase를 기반으로 Flutter로 구현할 예정이다. 
+다음 기능들을 백엔드/프론트에서 구현해야 한다:
+
+핵심 기능
+
+Firestore에 noise_samples, comments, likes 컬렉션 설계
+
+Flutter 앱에서 Firebase Auth 연동 (회원가입/로그인 가능)
+
+Flutter 앱에서 소음 dB 데이터 Firestore에 저장 가능
+
+익명화는 UUID anon_id로 처리
+
+특정 그룹에 속한 사람들끼리 공유
+
+회원가입, 로그인, 그룹장 넣기
+
+마이크로 소음 강도 측정
+
+iOS, Android에서 마이크 접근 권한 요청
+
+마이크 입력을 dB(데시벨) 단위로 변환
+
+일정 시간 단위(1초 단위)로 샘플링
+
+그래프 시각화
+
+모바일에서 실시간 그래프 표시 (charts_flutter)
+
+실시간 업데이트
+
+기준치 알림
+
+사용자가 기준치 설정
+
+기준치 초과 시 → 로컬 푸시 알림
+
+서버 확장 시 푸시 알림 가능
+
+일정 기준치 넘으면 특정 이벤트 룰렛(이건 나중에)
+
+익명 데이터 공유 + 댓글
+
+소음 데이터를 익명화해서 업로드 (사용자 ID 마스킹, 위치 최소화)
+
+Firebase 사용
+
+댓글/좋아요 기능 DB 설계
+
+생활 패턴 분석
+
+장기간 데이터 수집 후 주/야간, 요일별 패턴 분석
+
+평균/최대/최소 + 머신러닝 추천 가능성
+
+보안/개인정보 보호
+
+원본 오디오 파일 저장 ❌ → 가공된 dB만 저장
+
+클라우드 업로드 전 익명화
+
+기술 스택 요구사항
+1. Firebase + Flutter 사용
+
+백엔드: Firebase (Firestore, Authentication, Cloud Functions)
+
+실시간 데이터 저장 및 동기화: Firebase Realtime Database 또는 Firestore
+
+푸시 알림: Firebase Cloud Messaging (FCM)
+
+프론트엔드: Flutter (Android, iOS 동시 지원)
+
+Firebase Authentication을 이용한 회원가입/로그인
+
+Firebase Firestore를 이용한 데이터 저장/조회
+
+Flutter 패키지(ex: charts_flutter)로 실시간 그래프 표시
+
+공통 기술
+
+DB: Firebase Firestore (실시간 연동)
+
+실시간 통신: Firebase Realtime Database 또는 Firestore
+
+알림 서비스: Firebase Cloud Messaging(FCM)
+
+현재까지 진행된 내용
+
+Firebase 프로젝트 생성 완료
+
+추가 요구사항
+
+단계별 아키텍처 설계 및 코드 예시가 필요할 수 있음
+
+필요시 튜토리얼 방식으로 진행할 수 있음
+
+백엔드는 Firebase로 대체 (Cloud Functions + Firestore)
+
+Flutter 앱을 통해 Android, iOS 배포
+
+Firebase 설정 방법
+
+1. Firebase 프로젝트 생성
+2. Firestore Database 활성화
+3. Firebase Authentication 설정 (Email/Google 로그인 등)
+4. Firebase Cloud Messaging(FCM) 설정
+5. FlutterFire CLI를 이용하여 Flutter 앱과 Firebase 연동
+
+API 및 데이터 처리
+
+Firestore에 noise_samples 컬렉션 작성 → dB 데이터 저장
+
+익명화는 anon_id 필드로 처리
+
+댓글/좋아요 기능: comments, likes 컬렉션 설계 및 연동
+
+기준치 초과 이벤트 발생 시 → FCM 푸시 알림 발송
+
+현재 프로젝트: NoiseTime-youth
+
+프로젝트 설정
+
+일반
+
+내 프로젝트
+프로젝트 이름: NoiseTime-youth
+프로젝트 ID: noisetime-youth
+프로젝트 번호: 130019319095
+웹 API 키: 이 프로젝트에 웹 API 키가 없습니다.
+환경
+이 설정은 앱 수명 주기의 여러 단계에 맞게 프로젝트를 맞춤설정합니다.
+환경 유형: 미지정
+내 앱: 프로젝트에 앱이 없습니다. 시작하려면 플랫폼을 선택하세요.
+
+클라우드 메시징
+
+Firebase Cloud Messaging API(V1) 사용 설정됨
+대부분의 사용 사례에 권장됩니다. 자세히 알아보기
+
+상태 대시보드에서 V1 API의 실시간 성능을 확인하세요.
+
+발신자 ID: 130019319095
+서비스 계정 관리
+Cloud Messaging API(기존) 사용 중지됨
+기존 HTTP 또는 XMPP API(2023년 6월 20일에 지원 중단됨)의 기존 사용자는 2024년 6월 20일까지 최신 Firebase 클라우드 메시징 API(HTTP v1)로 마이그레이션해야 합니다. 자세히 알아보기
+
+웹 구성
+웹 푸시 인증서
+Firebase 클라우드 메시징은 애플리케이션 ID 키 쌍을 사용하여 외부 푸시 서비스에 연결할 수 있습니다. 자세히 알아보기
+키 쌍: 기존 키 쌍을 가져올 수도 있음
+
+통합
+
+Google Analytics: 최대 500개의 고유 이벤트에 대해 무료로 제한 없는 보고 기능 제공, 사용 설정됨
+AdMob: Google 광고주 수백만 명의 광고 게재
+Google Ads: 설치 유도, 통계 확인, 타겟팅 캠페인 실행
+BigQuery: Sandbox, 강력한 쿼리 테스트 가능
+Display & Video 360: 디스플레이 및 검색 마케팅의 효과 파악
+Google Play: 통합 사용 설정, Firebase, Google 애널리틱스, Google Play 기능 사용
+Slack: Firebase가 감지한 중요한 알림을 팀에 전송
+Jira: Jira에서 자동으로 문제 만들기
+PagerDuty: Firebase가 감지한 중요한 알림을 팀에 전송
+Cloud Logging: 실시간으로 프로젝트의 로그를 조회, 필터링, 검색
+
+서비스 계정
+
+서비스 계정 권한 관리
+Firebase Admin SDK
+이전 사용자 인증 정보
+데이터베이스 비밀번호
+모든 서비스 계정: 서비스 계정 2개
+Firebase Admin SDK
+Firebase 서비스 계정을 사용하여 Admin SDK 통해 데이터베이스, Storage, 인증 등 프로그래매틱 인증 가능
+Firebase 서비스 계정: firebase-adminsdk-fbsvc@noisetime-youth.iam.gserviceaccount.com
+Admin SDK 구성 스니펫:
+
+Node.js, Java, Python, Go
+var admin = require("firebase-admin");
+var serviceAccount = require("path/to/serviceAccountKey.json");
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+데이터 개인정보 보호
+
+Firebase 서비스 데이터란 무엇인가요?
+Firebase 서비스 데이터는 Google이 Firebase 서비스를 프로비저닝하고 관리하는 중에 수집하고 생성하는 개인 정보로서, 고객 데이터와 Google Cloud 서비스 데이터는 제외됨
+Firebase 서비스 데이터 설정
+Google에서 Firebase 외의 Google 서비스 사용에 관한 심층 분석, 통계, 권장사항 제공 가능
+
+개인 정보 보호 담당자
+GDPR에 따라 사용자 데이터를 '대규모'로 수집 또는 처리하거나, 특정 유형의 민감 정보 처리 시 DPO 지정 필요
+아직 프로젝트에 할당된 데이터 개인정보 보호 담당자 없음
+
+Google 애널리틱스 데이터 공유
+애널리틱스 데이터를 Firebase 및 기타 Google 제품과 공유하는 방식 제어 가능
+
+사용자 및 권한
+
+구성원 검색
+역할: 반존음 (hsw5875@gmail.com) → 소유자
+서비스 계정 2개도 프로젝트에 액세스 가능
+고급 권한 설정 가능
+
+알림
+
+이 프로젝트에 대한 알림 받기
+제품별 알림:
+- App Distribution: 프로젝트에 Apple 또는 Android 앱 없음
+- Authentication: 전화 인증 요금제 한도 곧 도달
+- Cloud Firestore: 안전하지 않은 규칙 있음
+- Crashlytics: 프로젝트에 Apple 또는 Android 앱 없음
+- Extensions: 게시한 확장 프로그램 검토 진행 중
+- Hosting: 저장/전송 한도 곧 도달
+- Performance Monitoring: 프로젝트에 Apple 또는 Android 앱 없음
+- Realtime Database: 안전하지 않은 규칙 있음
+- Test Lab: 콘솔 테스트 실행 완료
+
+Firebase 업데이트 및 프로모션 설정을 찾고 계시나요?
+현재 NoiseTime-youth 프로젝트의 프로젝트 수준 알림 설정을 보고 있습니다. 업데이트 및 프로모션과 같은 계정 수준 설정은 알림 구독에서 확인하세요.
+
+튜토리얼 16단계로 짜주고 내가 '튜토리얼 시작(1단계)' 라고 말하면 시작해줘
+
+firebase 프로젝트 만들기부터 해줘 프로젝트 명은 NoiseTime-youth 야 프로젝트를 만들었으나 아무런 앱도 만들지 않았어 https://studio.firebase.google.com/templates 에서 빈 템플릿에 flutter설치해 가지고 만들예정이야 튜토리얼 부탁해
+그리고 https://studio.firebase.google.com/templates에서 먼저 앱을 만들고 등록 , android, iOS 동시에 진행, 패키지는 com.akzmft8282.project.noisetime 으로 해줘
+
+그러니까 우선 https://studio.firebase.google.com/templates에서 먼저 앱을 만들고 앱이 완성되면 그때 연결을 하는거야 우선 앱부터 만들기!
+
+앱기능은

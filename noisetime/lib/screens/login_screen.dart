@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:noisetime/screens/signup_screen.dart';
 import 'package:noisetime/services/auth_service.dart';
@@ -46,16 +45,19 @@ class _LoginScreenState extends State<LoginScreen> {
             const SizedBox(height: 24),
             ElevatedButton(
               onPressed: () async {
+                // await 호출 전에 BuildContext를 사용하는 객체를 변수에 저장
+                final scaffoldMessenger = ScaffoldMessenger.of(context);
+
                 final user = await _authService.signInWithEmailAndPassword(
                   email: _emailController.text,
                   password: _passwordController.text,
                 );
-                if (user != null) {
-                  // 로그인이 성공하면 홈 화면으로 이동합니다.
-                  // 이 부분은 나중에 AuthGate에서 자동으로 처리됩니다.
-                } else {
-                  // 로그인 실패 시 사용자에게 알림
-                  ScaffoldMessenger.of(context).showSnackBar(
+                
+                if (user == null) {
+                  // await 이후에 위젯이 화면에 있는지 확인
+                  if (!mounted) return;
+                  // 미리 저장해둔 변수를 사용하여 SnackBar 표시
+                  scaffoldMessenger.showSnackBar(
                     const SnackBar(content: Text('로그인에 실패했습니다.')),
                   );
                 }

@@ -2,6 +2,7 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 
 class NotificationService {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
@@ -14,7 +15,7 @@ class NotificationService {
 
     // 2. Get FCM Token
     final fcmToken = await _firebaseMessaging.getToken();
-    print("FCM Token: $fcmToken");
+    debugPrint("FCM Token: $fcmToken");
 
     // 3. Save FCM Token to Firestore
     if (fcmToken != null) {
@@ -26,11 +27,11 @@ class NotificationService {
 
     // 5. Handle foreground messages
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
-      print('Got a message whilst in the foreground!');
-      print('Message data: ${message.data}');
+      debugPrint('Got a message whilst in the foreground!');
+      debugPrint('Message data: ${message.data}');
 
       if (message.notification != null) {
-        print('Message also contained a notification: ${message.notification}');
+        debugPrint('Message also contained a notification: ${message.notification}');
         // Here, you could display a local notification using a package like flutter_local_notifications
       }
     });

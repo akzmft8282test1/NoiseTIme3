@@ -1,36 +1,34 @@
-{ pkgs, ... }: {
-  # 채널을 가장 최신 버전인 'unstable'로 설정하여 패키지 호환성을 높입니다.
+{ pkgs, ... }:
+{
+  # 안정적인 패키지 채널을 사용합니다.
   channel = "stable-25.05";
 
   packages = [
     pkgs.flutter
-    pkgs.firebase-tools
-    pkgs.jdk
+    pkgs.deno
+    pkgs.docker
+    # [고객님 제안 적용] npm을 사용하기 위해 Node.js를 설치합니다.
+    pkgs.nodejs_22
   ];
 
-  env = {
-    JAVA_HOME = pkgs.jdk.home;
-    # Android SDK 라이선스에 동의합니다.
-    NIXPKGS_ACCEPT_ANDROID_SDK_LICENSE = "1";
-    # 결정적인 단서: 'unfree' 라이선스를 가진 패키지의 설치를 허용합니다.
-    NIXPKGS_ALLOW_UNFREE = "1";
-  };
+  # Docker 서비스를 활성화합니다.
+  services.docker.enable = true;
 
   idx = {
     extensions = [
       "dart-code.flutter"
+      "denoland.vscode-deno"
     ];
     workspace = {
+      # 워크스페이스가 처음 생성될 때 한 번만 실행됩니다.
       onCreate = {
-        # flutter config에 올바른 SDK 경로를 알려줍니다.
-        # flutter doctor를 통해 라이선스에 동의합니다.
-        accept-licenses-flutter = ''
-          yes | flutter doctor --android-licenses
-        '';
+        # [고객님 제안 적용] npm을 사용하여 최신 버전의 supabase-cli를 전역으로 설치합니다.
+        # 이 방법은 Nix 채널 문제로부터 자유롭고 훨씬 안정적입니다.
+        install-supabase-cli-via-npm = "npm install -g supabase-cli";
       };
       onStart = {
-        # 시작 시 flutter doctor를 실행하여 최종 상태를 확인합니다.
-        check-status = "flutter doctor";
+        # 시작 시 flutter doctor를 실행하여 환경을 확인합니다.
+        run-doctor = "flutter doctor";
       };
     };
   };

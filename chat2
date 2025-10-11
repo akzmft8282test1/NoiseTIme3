@@ -1,0 +1,231 @@
+login_screen.dart
+
+
+import 'package:flutter/material.dart';
+import 'package:noisetime/screens/signup_screen.dart';
+import 'package:noisetime/services/auth_service.dart';
+
+class LoginScreen extends StatefulWidget {
+  const LoginScreen({super.key});
+
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final AuthService _authService = AuthService();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('로그인'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: _emailController,
+              decoration: const InputDecoration(
+                labelText: '이메일',
+                border: OutlineInputBorder(),
+              ),
+              keyboardType: TextInputType.emailAddress,
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                labelText: '비밀번호',
+                border: OutlineInputBorder(),
+              ),
+              obscureText: true,
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () async {
+                final user = await _authService.signInWithEmailAndPassword(
+                  email: _emailController.text,
+                  password: _passwordController.text,
+                );
+                if (!mounted) return;
+                if (user == null) {
+                  // 로그인 실패 시 사용자에게 알림
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('로그인에 실패했습니다.')),
+                  );
+                }
+              },
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 50),
+              ),
+              child: const Text('로그인'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SignupScreen()),
+                );
+              },
+              child: const Text('아직 계정이 없으신가요? 회원가입'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+[{
+	"resource": "/home/user/noisetime/noisetime/lib/screens/login_screen.dart",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": {
+		"value": "use_build_context_synchronously",
+		"target": {
+			"$mid": 1,
+			"path": "/diagnostics/use_build_context_synchronously",
+			"scheme": "https",
+			"authority": "dart.dev"
+		}
+	},
+	"severity": 2,
+	"message": "Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check.\nGuard a 'State.context' use with a 'mounted' check on the State, and other BuildContext use with a 'mounted' check on the BuildContext.",
+	"source": "dart",
+	"startLineNumber": 56,
+	"startColumn": 40,
+	"endLineNumber": 56,
+	"endColumn": 47
+}]
+
+signup_screen.dart
+
+
+import 'package:flutter/material.dart';
+import 'package:noisetime/services/auth_service.dart';
+
+class SignupScreen extends StatefulWidget {
+  const SignupScreen({super.key});
+
+  @override
+  State<SignupScreen> createState() => _SignupScreenState();
+}
+
+class _SignupScreenState extends State<SignupScreen> {
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final AuthService _authService = AuthService();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('회원가입'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: _nameController,
+              decoration: const InputDecoration(
+                labelText: '이름 (닉네임)',
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _emailController,
+              decoration: const InputDecoration(
+                labelText: '이메일',
+                border: OutlineInputBorder(),
+              ),
+              keyboardType: TextInputType.emailAddress,
+            ),
+            const SizedBox(height: 16),
+            TextField(
+              controller: _passwordController,
+              decoration: const InputDecoration(
+                labelText: '비밀번호',
+                border: OutlineInputBorder(),
+              ),
+              obscureText: true,
+            ),
+            const SizedBox(height: 24),
+            ElevatedButton(
+              onPressed: () async {
+                final user = await _authService.createUserWithEmailAndPassword(
+                  email: _emailController.text,
+                  password: _passwordController.text,
+                  displayName: _nameController.text,
+                );
+                if (!mounted) return;
+                if (user != null) {
+                  // 회원가입 성공 시 로그인 화면으로 돌아감
+                  Navigator.pop(context);
+                } else {
+                  // 회원가입 실패 시 사용자에게 알림
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('회원가입에 실패했습니다.')),
+                  );
+                }
+              },
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size(double.infinity, 50),
+              ),
+              child: const Text('회원가입'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+[{
+	"resource": "/home/user/noisetime/noisetime/lib/screens/signup_screen.dart",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": {
+		"value": "use_build_context_synchronously",
+		"target": {
+			"$mid": 1,
+			"path": "/diagnostics/use_build_context_synchronously",
+			"scheme": "https",
+			"authority": "dart.dev"
+		}
+	},
+	"severity": 2,
+	"message": "Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check.\nGuard a 'State.context' use with a 'mounted' check on the State, and other BuildContext use with a 'mounted' check on the BuildContext.",
+	"source": "dart",
+	"startLineNumber": 65,
+	"startColumn": 33,
+	"endLineNumber": 65,
+	"endColumn": 40
+}]
+
+[{
+	"resource": "/home/user/noisetime/noisetime/lib/screens/signup_screen.dart",
+	"owner": "_generated_diagnostic_collection_name_#4",
+	"code": {
+		"value": "use_build_context_synchronously",
+		"target": {
+			"$mid": 1,
+			"path": "/diagnostics/use_build_context_synchronously",
+			"scheme": "https",
+			"authority": "dart.dev"
+		}
+	},
+	"severity": 2,
+	"message": "Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check.\nGuard a 'State.context' use with a 'mounted' check on the State, and other BuildContext use with a 'mounted' check on the BuildContext.",
+	"source": "dart",
+	"startLineNumber": 68,
+	"startColumn": 40,
+	"endLineNumber": 68,
+	"endColumn": 47
+}]

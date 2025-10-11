@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:noisetime/services/auth_service.dart';
+import 'package:noisetime/services/group_service.dart'; // 새로 만든 GroupService를 가져옵니다.
+import 'package:supabase_flutter/supabase_flutter.dart'; // Supabase Client 접근을 위해 추가
 
 class GroupScreen extends StatefulWidget {
   const GroupScreen({super.key});
@@ -11,40 +12,15 @@ class GroupScreen extends StatefulWidget {
 }
 
 class _GroupScreenState extends State<GroupScreen> {
-  final _auth = FirebaseAuth.instance;
-  final _firestore = FirebaseFirestore.instance;
+  // 서비스들을 초기화합니다.
+  final _groupService = GroupService();
+  final _authService = AuthService(); // 로그아웃을 위해 필요
+  
+  // 다이얼로그에서 사용할 컨트롤러
   final _groupNameController = TextEditingController();
-  final _emailController = TextEditingController();
+  final _groupIdController = TextEditingController();
 
-  Stream<DocumentSnapshot> _userStream() {
-    final user = _auth.currentUser;
-    return _firestore.collection('users').doc(user!.uid).snapshots();
-  }
-
-  Stream<DocumentSnapshot> _groupStream(String groupId) {
-    return _firestore.collection('groups').doc(groupId).snapshots();
-  }
-
-  void _createGroup() async {
-    if (_groupNameController.text.isEmpty) return;
-
-    final user = _auth.currentUser!;
-    final groupRef = await _firestore.collection('groups').add({
-      'name': _groupNameController.text,
-      'owner_id': user.uid,
-      'members': [user.uid],
-      'penalty_percentage': 10.0, // 기본 페널티 10%
-    });
-
-    await _firestore
-        .collection('users')
-        .doc(user.uid)
-        .update({'group_id': groupRef.id});
-
-    _groupNameController.clear();
-    Navigator.of(context).pop();
-  }
-
+  // 그룹 생성 다이얼로그를 보여주는 함수
   void _showCreateGroupDialog() {
     showDialog(
       context: context,
@@ -60,7 +36,23 @@ class _GroupScreenState extends State<GroupScreen> {
             child: const Text('Cancel'),
           ),
           ElevatedButton(
-            onPressed: _createGroup,
+            onPressed: () async {
+              if (_groupNameController.text.isEmpty) return;
+              
+              final messenger = ScaffoldMessenger.of(context);
+              final navigator = Navigator.of(context);
+
+              try {
+                await _groupService.createGroup(_groupNameController.text);
+                _groupNameController.clear();
+                navigator.pop(); // 성공 시 다이얼로그 닫기
+              } catch (e) {
+                messenger.showSnackBar(SnackBar(
+                  content: Text('Failed to create group: ${e.toString()}'),
+                  backgroundColor: Theme.of(context).colorScheme.error,
+                ));
+              }
+            },
             child: const Text('Create'),
           ),
         ],
@@ -68,174 +60,141 @@ class _GroupScreenState extends State<GroupScreen> {
     );
   }
 
-  void _showAddMemberDialog(String groupId) {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            title: const Text('Add Member'),
-            content: TextField(
-              controller: _emailController,
-              decoration: const InputDecoration(labelText: 'User Email'),
-            ),
-            actions: [
-              TextButton(
-                  onPressed: () => Navigator.of(context).pop(),
-                  child: const Text('Cancel')),
-              ElevatedButton(
-                  onPressed: () => _addMemberByEmail(groupId),
-                  child: const Text('Add')),
-            ],
-          );
-        });
-  }
-
-  void _addMemberByEmail(String groupId) async {
-    if (_emailController.text.isEmpty) return;
-
-    final querySnapshot = await _firestore
-        .collection('users')
-        .where('email', isEqualTo: _emailController.text)
-        .limit(1)
-        .get();
-
-    if (querySnapshot.docs.isEmpty) {
-      // 유저를 찾을 수 없음
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('User not found with that email.')));
-      return;
-    }
-
-    final userToAdd = querySnapshot.docs.first;
-    await _firestore
-        .collection('groups')
-        .doc(groupId)
-        .update({'members': FieldValue.arrayUnion([userToAdd.id])});
-        
-    await _firestore
-        .collection('users')
-        .doc(userToAdd.id)
-        .update({'group_id': groupId});
-
-    _emailController.clear();
-    Navigator.of(context).pop();
-  }
-  
-  void _removeMember(String groupId, String memberId) async {
-     await _firestore.collection('groups').doc(groupId).update({
-        'members': FieldValue.arrayRemove([memberId])
-    });
-    await _firestore.collection('users').doc(memberId).update({
-        'group_id': null
-    });
-  }
-
-  void _updatePenalty(String groupId, double newPenalty) {
-    _firestore
-        .collection('groups')
-        .doc(groupId)
-        .update({'penalty_percentage': newPenalty});
+  // 그룹 가입 다이얼로그 (아직 기능 구현 안됨)
+  void _showJoinGroupDialog() {
+     showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Join Group'),
+        content: TextField(
+          controller: _groupIdController,
+          decoration: const InputDecoration(labelText: 'Group ID'),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('Cancel'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+               // TODO: 그룹 가입 로직 구현
+               ScaffoldMessenger.of(context).showSnackBar(
+                 const SnackBar(content: Text('This feature is not yet implemented.')),
+               );
+            },
+            child: const Text('Join'),
+          ),
+        ],
+      ),
+    );
   }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: StreamBuilder<DocumentSnapshot>(
-        stream: _userStream(),
+      appBar: AppBar(
+        title: const Text('My Group'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () async {
+              await _authService.signOut();
+              // AuthGate가 상태를 감지하여 자동으로 로그인 화면으로 보냅니다.
+            },
+          )
+        ],
+      ),
+      body: StreamBuilder<Map<String, dynamic>?>(
+        // 1. GroupService를 통해 현재 유저의 프로필 정보를 실시간으로 받습니다.
+        stream: _groupService.getProfileStream(),
         builder: (context, userSnapshot) {
-          if (!userSnapshot.hasData) {
+          if (userSnapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           }
-          final userData = userSnapshot.data!.data() as Map<String, dynamic>;
-          final groupId = userData['group_id'];
-
-          if (groupId == null) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text('You are not in a group.'),
-                  const SizedBox(height: 20),
-                  ElevatedButton(
-                    onPressed: _showCreateGroupDialog,
-                    child: const Text('Create a Group'),
-                  ),
-                  // TODO: 그룹 참여 기능
-                ],
-              ),
-            );
+          if (!userSnapshot.hasData || userSnapshot.data == null) {
+            return const Center(child: Text('Could not load profile.'));
           }
 
-          return StreamBuilder<DocumentSnapshot>(
-            stream: _groupStream(groupId),
+          final userData = userSnapshot.data!;
+          final groupId = userData['group_id'];
+
+          // 2. 프로필에 group_id가 없는 경우, 그룹 생성/참여 화면을 보여줍니다.
+          if (groupId == null) {
+            return _buildNoGroupView();
+          }
+
+          // 3. group_id가 있는 경우, 해당 그룹 정보를 스트림으로 받아와 화면을 구성합니다.
+          return StreamBuilder<Map<String, dynamic>?>(
+            stream: _groupService.getGroupStream(groupId as String),
             builder: (context, groupSnapshot) {
-              if (!groupSnapshot.hasData) {
+              if (groupSnapshot.connectionState == ConnectionState.waiting) {
                 return const Center(child: CircularProgressIndicator());
               }
-              final groupData = groupSnapshot.data!.data() as Map<String, dynamic>;
-              final isOwner = groupData['owner_id'] == _auth.currentUser!.uid;
-
-              return Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(groupData['name'],
-                        style: Theme.of(context).textTheme.headlineMedium),
-                    const SizedBox(height: 24),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text('Members',
-                            style: Theme.of(context).textTheme.titleLarge),
-                        if (isOwner)
-                          IconButton(
-                            icon: const Icon(Icons.add),
-                            onPressed: () => _showAddMemberDialog(groupId),
-                          ),
-                      ],
-                    ),
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: groupData['members'].length,
-                        itemBuilder: (context, index) {
-                            // This would be more robust if we fetch member details
-                            final memberId = groupData['members'][index];
-                            return ListTile(
-                                title: Text(memberId), // Replace with user's name/email
-                                trailing: (isOwner && memberId != _auth.currentUser!.uid)
-                                    ? IconButton(
-                                        icon: const Icon(Icons.remove_circle_outline, color: Colors.red),
-                                        onPressed: () => _removeMember(groupId, memberId),
-                                    )
-                                    : null,
-                            );
-                        },
-                      ),
-                    ),
-                     const SizedBox(height: 24),
-                    if(isOwner) ...[
-                        Text('Noise Penalty: ${groupData['penalty_percentage'].toStringAsFixed(0)}%', style: Theme.of(context).textTheme.titleLarge),
-                        Slider(
-                            value: groupData['penalty_percentage'],
-                            min: 0,
-                            max: 100,
-                            divisions: 10,
-                            label: groupData['penalty_percentage'].round().toString(),
-                            onChanged: (double value) {
-                                _updatePenalty(groupId, value);
-                            },
-                        )
-                    ]
-                  ],
-                ),
-              );
+              if (!groupSnapshot.hasData || groupSnapshot.data == null) {
+                return const Center(child: Text('Group not found.'));
+              }
+              
+              final groupData = groupSnapshot.data!;
+              return _buildGroupDetailsView(groupData);
             },
           );
         },
       ),
     );
   }
-}
 
+  // 그룹이 없을 때 보여줄 위젯
+  Widget _buildNoGroupView() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          const Text('You are not in a group.'),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: _showCreateGroupDialog,
+            child: const Text('Create a Group'),
+          ),
+          const SizedBox(height: 8),
+          const Text('or'),
+          const SizedBox(height: 8),
+          ElevatedButton(
+            onPressed: _showJoinGroupDialog, // 가입 기능은 아직 미구현
+            child: const Text('Join a Group'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 그룹 상세 정보를 보여줄 위젯
+  Widget _buildGroupDetailsView(Map<String, dynamic> groupData) {
+    final isOwner = groupData['owner_id'] == Supabase.instance.client.auth.currentUser!.id;
+    
+    // TODO: 멤버 목록을 별도의 쿼리로 가져와야 합니다.
+    // 현재는 임시로 그룹 이름과 소유자 여부만 표시합니다.
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(groupData['name'] as String, style: Theme.of(context).textTheme.headlineMedium),
+          const SizedBox(height: 24),
+          Text('Group ID: ${groupData['id']}', style: Theme.of(context).textTheme.bodySmall),
+          const SizedBox(height: 24),
+          Text('Members', style: Theme.of(context).textTheme.titleLarge),
+          const Expanded(
+            child: Center(
+              child: Text('(Member list will be shown here)'), // 임시 텍스트
+            )
+          ),
+          if(isOwner) ...[
+              Text('Noise Penalty: ...%', style: Theme.of(context).textTheme.titleLarge),
+              // TODO: 페널티 설정 슬라이더 구현
+          ]
+        ],
+      ),
+    );
+  }
+}
