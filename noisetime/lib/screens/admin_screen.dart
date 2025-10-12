@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -26,8 +25,8 @@ class _AdminScreenState extends State<AdminScreen> {
     });
 
     try {
-      // Supabase Edge Function 호출
-      final response = await Supabase.instance.client.functions.invoke(
+      // Supabase Edge Function 호출 (response 변수 제거)
+      await Supabase.instance.client.functions.invoke(
         'send-group-notification', // 11단계에서 배포한 함수 이름
         body: {
           'group_id': _groupIdController.text,

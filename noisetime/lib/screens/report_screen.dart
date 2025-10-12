@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:fl_chart/fl_chart.dart'; // 차트 라이브러리
@@ -87,7 +86,7 @@ class DailyStatsChart extends StatelessWidget {
         titlesData: FlTitlesData(
             show: true,
             bottomTitles: AxisTitles(
-                sideTitles: SideTitles(showTitles: true, getTitlesWidget: _bottomTitles)),
+                sideTitles: SideTitles(showTitles: true, getTitlesWidget: _bottomTitles, reservedSize: 28)), // 간격 조정
             leftTitles: const AxisTitles(sideTitles: SideTitles(showTitles: true, reservedSize: 40)),
             topTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false)),
             rightTitles: const AxisTitles(sideTitles: SideTitles(showTitles: false))),
@@ -112,10 +111,18 @@ class DailyStatsChart extends StatelessWidget {
   }
 
   Widget _bottomTitles(double value, TitleMeta meta) {
-      final index = value.toInt();
-      if (index >= stats.length) return const SizedBox.shrink();
+    final index = value.toInt();
+    String text = '';
+    // stats 리스트의 범위 안에 있는지 확인합니다.
+    if (index >= 0 && index < stats.length) {
       final day = DateTime.parse(stats[index]['report_day']).day;
-      return SideTitleWidget(axisSide: meta.axisSide, space: 4, child: Text('$day일'));
+      text = '$day일';
+    }
+    // SideTitleWidget 없이 Text 위젯을 직접 반환합니다.
+    return Padding(
+      padding: const EdgeInsets.only(top: 4.0), // 기존 space: 4 와 유사한 효과
+      child: Text(text, style: const TextStyle(fontSize: 12)),
+    );
   }
 }
 
@@ -168,4 +175,3 @@ class RecentActivityList extends StatelessWidget {
     );
   }
 }
-

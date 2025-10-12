@@ -41,24 +41,33 @@ class GroupService {
 
     final newGroupId = newGroup['id'];
 
-    await _supabase.from('group_members').insert({
-      'group_id': newGroupId,
-      'profile_id': user.id,
-    });
-    
+    // group_members 테이블은 사용하지 않으므로 관련 로직 제거
+
     await _supabase
         .from('profiles')
         .update({'group_id': newGroupId})
         .eq('id', user.id);
   }
 
-  // *** 추가된 함수 ***
+  // 그룹에서 나가는 함수
+  Future<void> leaveGroup() async {
+    final user = _supabase.auth.currentUser;
+    if (user == null) {
+      throw Exception('User not logged in');
+    }
+    // 사용자의 group_id를 null로 업데이트합니다.
+    await _supabase
+        .from('profiles')
+        .update({'group_id': null})
+        .eq('id', user.id);
+  }
+
   // 소음 샘플을 데이터베이스에 저장하는 함수
   Future<void> saveNoiseSample(String groupId, String userId, double decibel) async {
     await _supabase.from('noise_samples').insert({
       'group_id': groupId,
       'profile_id': userId,
-      'noise_level': decibel,
+      'db_level': decibel, // 컬럼명 db_level로 수정
     });
   }
 

@@ -15,7 +15,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final _groupService = GroupService();
   final _authService = AuthService();
 
-  Future<void> _leaveGroup(String groupId) async {
+  // groupId 인자 제거
+  Future<void> _leaveGroup() async {
     final shouldLeave = await showDialog<bool>(
       context: context,
       builder: (context) => AlertDialog(
@@ -30,7 +31,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     if (shouldLeave == true) {
       try {
-        await _groupService.leaveGroup(groupId);
+        // 인자 없이 서비스 함수 호출
+        await _groupService.leaveGroup();
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             const SnackBar(content: Text('Successfully left the group.'), backgroundColor: Colors.green),
@@ -81,7 +83,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 subtitle: Text(groupId ?? 'Not in a group'),
                 trailing: groupId != null
                     ? ElevatedButton(
-                        onPressed: () => _leaveGroup(groupId),
+                        // 인자 없이 함수 호출
+                        onPressed: _leaveGroup,
                         style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
                         child: const Text('Leave'),
                       )

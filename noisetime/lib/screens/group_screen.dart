@@ -1,4 +1,4 @@
-계
+
 import 'dart:async';
 
 import 'package:flutter/material.dart';
@@ -9,7 +9,6 @@ import 'package:noisetime/services/auth_service.dart';
 import 'package:noisetime/services/group_service.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'package:fl_chart/fl_chart.dart';
 
 class GroupScreen extends StatefulWidget {
   const GroupScreen({super.key});
@@ -35,13 +34,23 @@ class _GroupScreenState extends State<GroupScreen> {
   @override
   void initState() {
     super.initState();
-    _noiseMeter = NoiseMeter(onError);
+    // 생성자에서 onError를 제거합니다.
+    _noiseMeter = NoiseMeter();
   }
 
   @override
   void dispose() {
     _noiseSubscription?.cancel();
     super.dispose();
+  }
+
+  // onData 콜백 함수
+  void onData(NoiseReading noiseReading) {
+    if (mounted) {
+      setState(() {
+        _latestReading = noiseReading;
+      });
+    }
   }
   
   void onError(Object error) {
@@ -62,13 +71,8 @@ class _GroupScreenState extends State<GroupScreen> {
   void start() async {
     try {
       await _requestPermission();
-      _noiseSubscription = _noiseMeter?.noise.listen((noiseReading) {
-        if (mounted) {
-          setState(() {
-            _latestReading = noiseReading;
-          });
-        }
-      });
+      // listen 메소드에 onData와 onError 콜백을 전달합니다.
+      _noiseSubscription = _noiseMeter?.noise.listen(onData, onError: onError);
       if (mounted) {
         setState(() => _isRecording = true);
       }
@@ -99,13 +103,11 @@ class _GroupScreenState extends State<GroupScreen> {
     final messenger = ScaffoldMessenger.of(context);
     
     try {
-      // 현재 사용자 ID 가져오기
       final userId = _authService.currentUser?.id;
       if (userId == null) {
         throw Exception('User not logged in.');
       }
 
-      // 현재 사용자의 group_id 가져오기
       final profileResponse = await _supabase
           .from('profiles')
           .select('group_id')
@@ -118,7 +120,7 @@ class _GroupScreenState extends State<GroupScreen> {
         throw Exception('User is not in a group.');
       }
       
-      // 올바른 인자들로 서비스 함수 호출
+      // 컬럼명을 db_level로 수정
       await _groupService.saveNoiseSample(groupId, userId, meanDecibel);
 
       messenger.showSnackBar(
@@ -162,12 +164,14 @@ class _GroupScreenState extends State<GroupScreen> {
               try {
                 await _groupService.createGroup(_groupNameController.text);
                 _groupNameController.clear();
-                navigator.pop();
+                if (mounted) navigator.pop();
               } catch (e) {
-                messenger.showSnackBar(SnackBar(
-                  content: Text('Failed to create group: ${e.toString()}'),
-                  backgroundColor: Theme.of(context).colorScheme.error,
-                ));
+                if (mounted) {
+                  messenger.showSnackBar(SnackBar(
+                    content: Text('Failed to create group: ${e.toString()}'),
+                    backgroundColor: Theme.of(context).colorScheme.error,
+                  ));
+                }
               }
             },
             child: const Text('Create'),
