@@ -13,13 +13,13 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.6
-  firebase_core: ^4.1.1
-  firebase_auth: ^6.1.0
-  cloud_firestore: ^6.0.2
+  # firebase_core: ^4.1.1 # Supabase로 대체되므로 제거
+  # firebase_auth: ^6.1.0 # Supabase로 대체되므로 제거
+  # cloud_firestore: ^6.0.2 # Supabase로 대체되므로 제거
   permission_handler: ^11.3.1
   noise_meter: ^5.0.2
   fl_chart: ^0.71.0
-  firebase_messaging: ^16.0.2
+  firebase_messaging: ^16.0.2 # 푸시 알림을 위해 유지
   supabase_flutter: ^2.10.3
   intl: ^0.19.0 # 날짜 포맷팅을 위해 추가
 

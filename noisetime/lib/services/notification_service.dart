@@ -1,13 +1,11 @@
 
 import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:flutter/foundation.dart';
 
 class NotificationService {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final SupabaseClient _supabase = Supabase.instance.client;
 
   Future<void> initialize() async {
     // 1. Request Permission (iOS & Android 13+)
@@ -17,13 +15,13 @@ class NotificationService {
     final fcmToken = await _firebaseMessaging.getToken();
     debugPrint("FCM Token: $fcmToken");
 
-    // 3. Save FCM Token to Firestore
+    // 3. Save FCM Token to Database
     if (fcmToken != null) {
-      await saveTokenToFirestore(fcmToken);
+      await saveTokenToDatabase(fcmToken);
     }
 
     // 4. Listen for token refresh
-    _firebaseMessaging.onTokenRefresh.listen(saveTokenToFirestore);
+    _firebaseMessaging.onTokenRefresh.listen(saveTokenToDatabase);
 
     // 5. Handle foreground messages
     FirebaseMessaging.onMessage.listen((RemoteMessage message) {
@@ -37,14 +35,17 @@ class NotificationService {
     });
   }
 
-  Future<void> saveTokenToFirestore(String token) async {
-    final user = _auth.currentUser;
+  Future<void> saveTokenToDatabase(String token) async {
+    final user = _supabase.auth.currentUser;
     if (user == null) return;
 
-    final tokensRef = _firestore.collection('users').doc(user.uid);
-
-    await tokensRef.update({
-      'fcm_token': token,
-    });
+    try {
+      await _supabase
+          .from('users')
+          .update({'fcm_token': token})
+          .eq('id', user.id);
+    } catch (e) {
+      debugPrint('Error saving FCM token: $e');
+    }
   }
 }
